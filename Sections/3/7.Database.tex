@@ -183,15 +183,14 @@ PostgreSQL là một RDBMS mở nguồn mở được xây dựng trên mã ngu�
 \end{itemize}
 
 \subsubsection{Hệ cơ sở dữ liệu phi quan hệ (Non-RDBMS)}
-
 Hệ cơ sở dữ liệu phi quan hệ là cơ sở dữ liệu không sử dụng mô hình bảng gồm các cột và hàng như nhiều hệ cơ sở dữ liệu truyền thống. Thay vào đó, Non-RDBMS sử dụng mô hình lưu trữ được tối ưu hóa cho các yêu cầu cụ thể của loại dữ liệu được lưu trữ. Cơ sở dữ liệu phi quan hệ (Non-relational database) phổ biến nhất được gọi là NoSQL.\\
 Các Non-RDBMS phổ biến:
 \subsubsubsection{MongoDB}
-\begin{figure}[!h]
-    \centering
+\begin{center}
+  \captionsetup{type=figure}
     \includegraphics[width=10cm]{img/mongo.png}
-    \caption{MongoDB}
-\end{figure}
+  \captionof{figure}{MongoDB}
+\end{center}
 
 MongoDB là một hệ quản trị cơ sở dữ liệu mã nguồn mở và là cơ sở dữ liệu NoSQL hàng đầu, được nhiều người sử dụng.
 
@@ -237,7 +236,13 @@ Neo4j là hệ quản trị cơ sở dữ liệu đồ thị đầu tiên đư�
   \captionof{figure}{Cassandra}
 \end{center}
 
+Cassandra ban đầu được tạo ra bởi Facebook. Sau đó nó đã được tặng cho Quỹ Apache và tháng 2 năm 2010 và được nâng cấp lên thành dự án hàng đầu của Apache. Cassandra là một cơ sở dữ liệu phân tán kết hợp mô hình dữ liệu của Google Bigtable với thiết kế hệ thống phân tán như bản sao của Amazon Dynamo.\\
 
+\textit{Đặc điểm:}
+\begin{itemize}
+    \item Tính phân tán và không tập trung (distributed and decentralized): Khả năng phân chia dữ liệu thành nhiều phần, đặt trên nhiều node khác nhau trong khi người dùng vẫn nhận thấy dữ liệu này là một khối thống nhất.
+    \item Tính mềm dẻo (elastic scalability): Hệ thống có thể dễ dàng mở rộng số node trong cluster để có thể phục vụ số lượng request lớn và rút bớt số node khi số lượng request giảm.
+\end{itemize}
 \subsubsection{So sánh Relational Database và Non-Relational Database}
 \begin{table}[!h]
 	    \centering
