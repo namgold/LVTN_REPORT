@@ -9,7 +9,7 @@ Hệ thống quản lý cơ sở dữ liệu quan hệ (RDBMS) là một hệ th
 \textbf{Bảng (Table):}\\
 
 RDBMS sử dụng các bảng để lưu trữ dữ liệu. Mỗi bảng là một tập hợp các dữ liệu có liên quan đến nhau và có nhiều hàng và cột để lưu dữ liệu. Bảng là hình thức lưu trữ phổ biến và đơn giản nhất trong môt cơ sở dữ liệu quan hệ. Ví dụ về bảng một nhóm môn học trong bảng MONHOC sau đây:\\
-\begin{table}[!h]
+\begin{table}[H]
     \centering
     \begin{tabular}{|l|l|l|}
     \hline
@@ -28,7 +28,7 @@ RDBMS sử dụng các bảng để lưu trữ dữ liệu. Mỗi bảng là m�
 \textbf{Trường (Field):}\\
 	
 	Mỗi bảng được chia thành các thực thể nhỏ gọi là các trường, chứa các thông tin cụ thể về mỗi bản ghi trong bảng. Các trường trong bảng MONHOC bao gồm: ID, TEN\_MON\_HOC, SO\_TIN\_CHI.\\
-	\begin{table}[!h]
+	\begin{table}[H]
 	    \centering
 	    \begin{tabular}{|l|}
 	        \hline
@@ -47,7 +47,7 @@ RDBMS sử dụng các bảng để lưu trữ dữ liệu. Mỗi bảng là m�
 \textbf{Hàng hoặc bản ghi (Record):}\\
 	
 Một hàng của bảng được gọi là bản ghi , nó chứa thông tin của một đối tượng trong bảng. Ví dụ ở bảng MONHOC có 3 bản ghi. Sau đây là một bản ghi trong bảng:\\
-\begin{table}[!h]
+\begin{table}[H]
     \centering
     \begin{tabular}{|r|r|r|}
         \hline
@@ -57,13 +57,13 @@ Một hàng của bảng được gọi là bản ghi , nó chứa thông tin c�
     \caption{Ví dụ về một bản ghi}
 \end{table}
 
-\textbf{Ràng buộc (Constraint):}\\
+\textbf{Ràng buộc (Constraint):}
 
 Ràng buộc là các quy tắc cho các cột dữ liệu trong bảng. Chúng được sử dụng để giới hạn loại dữ liệu có thể insert vào một bảng. Điều này đảm bảo tính chính xác và độ tin cậy của dữ liệu trong cơ sở dữ liệu.\\
 Constraint có thể là cấp độ cột hoặc cấp độ bảng. Các ràng buộc cấp độ cột chỉ được áp dụng cho một
 cột trong khi các ràng buộc mức bảng được áp dụng cho toàn bộ bảng.\\
 Sau đây là một số ràng buộc phổ biến nhất được sử dụng trong SQL :\\
-\begin{table}[!h]
+\begin{table}[H]
     \centering
     \begin{tabular}{|l|l|}
         \hline
@@ -92,13 +92,13 @@ Mỗi DBMS đều có thành phần gọi là Query Language (Ngôn ngữ truy v
 
 Các hệ quản trị cơ sở dữ liệu quan hệ phổ biến nhất hiện nay:
 \subsubsubsection{Oracle Database}
-\begin{figure}[!h]
-    \centering
-    \includegraphics[scale=0.4]{img/oracle.jpg}
-    \caption{Oracle Database}
-\end{figure}
+\begin{center}
+  \captionsetup{type=figure}
+  \includegraphics[scale=0.4]{img/oracle.jpg}
+  \captionof{figure}{Oracle Database}
+\end{center}
 
-Oracle Database hay còn gọi là Oracle RDBMS hoặc đơn giản là Oracle là 1 hệ quản trị cơ sở dữ liệu quan hệ, được phát triển và phân phối bởi tập đoàn Oracle.\\
+Oracle Database hay còn gọi là Oracle RDBMS hoặc đơn giản là Oracle là 1 hệ quản trị cơ sở dữ liệu quan hệ, được phát triển và phân phối bởi tập đoàn Oracle.
 
 \textit{Đặc điểm và thế mạnh:}
 \begin{itemize}
@@ -112,11 +112,11 @@ Oracle Database hay còn gọi là Oracle RDBMS hoặc đơn giản là Oracle l
 \end{itemize}
 
 \subsubsubsection{MySQL}
-\begin{figure}[!h]
-    \centering
+\begin{center}
+  \captionsetup{type=figure}
     \includegraphics[scale=0.5]{img/mysql.jpg}
-    \caption{MySQL}
-\end{figure}
+  \captionof{figure}{MySQL}
+\end{center}
 
 MySQL là một hệ quản trị cơ sở dữ liệu quan hệ mã nguồn mở, được phát triển, phân phối và hỗ trợ bởi tập đoàn Oracle.\\
 
@@ -146,12 +146,12 @@ MySQL là một hệ quản trị cơ sở dữ liệu quan hệ mã nguồn m�
     \item \textbf{Đa tính năng:} Hỗ trợ rất nhiều chức năng SQL
 \end{itemize}
 \subsubsubsection{SQL Server}
-\begin{figure}[!h]
-    \centering
+\begin{center}
+  \captionsetup{type=figure}
     \includegraphics[scale=0.3]{img/sql-server.png}
-    \caption{SQL Server}
-\end{figure}
-SQL Server là một RDBMS được phát triển bởi tập đoàn Microsoft.\\
+  \captionof{figure}{SQL Server}
+\end{center}
+SQL Server là một RDBMS được phát triển bởi tập đoàn Microsoft.
 
 \textit{Thế mạnh:}
 \begin{itemize}
@@ -165,13 +165,13 @@ SQL Server là một RDBMS được phát triển bởi tập đoàn Microsoft.\
 \end{itemize}
 
 \subsubsubsection{PostgreSQL}
-\begin{figure}[!h]
-    \centering
+\begin{center}
+  \captionsetup{type=figure}
     \includegraphics[scale=0.5]{img/postgre-sql.jpg}
-    \caption{PostgreSQL}
-\end{figure}
+  \captionof{figure}{PostgreSQL}
+\end{center}
 
-PostgreSQL là một RDBMS mở nguồn mở được xây dựng trên mã nguồn ban đầu của đại học Berkeley.\\
+PostgreSQL là một RDBMS mở nguồn mở được xây dựng trên mã nguồn ban đầu của đại học Berkeley.
 
 \textit{Đặc điểm và thế mạnh:}
 \begin{itemize}
@@ -219,9 +219,9 @@ Các thuật ngữ thường sử dụng trong MongoDB:
   \captionof{figure}{Neo4j}
 \end{center}
 
-Neo4j là hệ quản trị cơ sở dữ liệu đồ thị đầu tiên được giới thiệu vào năm 2007 và công bố phiên bản 1.0 vào năm 2010. Hiện nay Neo4j là một trong những hệ quản trị cơ sở dữ liệu đồ thị được sử dụng nhiều nhất.\\
+Neo4j là hệ quản trị cơ sở dữ liệu đồ thị đầu tiên được giới thiệu vào năm 2007 và công bố phiên bản 1.0 vào năm 2010. Hiện nay Neo4j là một trong những hệ quản trị cơ sở dữ liệu đồ thị được sử dụng nhiều nhất.
 
-\textit{Đặc điểm:} Các đối tượng được miêu tả dưới dạng các đỉnh của đồ thị, các thuộc tính của đối tượng được miêu tả bằng liên kết có hướng đến một đối tượng khác.\\
+\textit{Đặc điểm:} Các đối tượng được miêu tả dưới dạng các đỉnh của đồ thị, các thuộc tính của đối tượng được miêu tả bằng liên kết có hướng đến một đối tượng khác.
 
 \textit{Thế mạnh:}
 \begin{itemize}
@@ -238,13 +238,24 @@ Neo4j là hệ quản trị cơ sở dữ liệu đồ thị đầu tiên đư�
 
 Cassandra ban đầu được tạo ra bởi Facebook. Sau đó nó đã được tặng cho Quỹ Apache và tháng 2 năm 2010 và được nâng cấp lên thành dự án hàng đầu của Apache. Cassandra là một cơ sở dữ liệu phân tán kết hợp mô hình dữ liệu của Google Bigtable với thiết kế hệ thống phân tán như bản sao của Amazon Dynamo.\\
 
-\textit{Đặc điểm:}
+\textit{Đặc điểm và thế mạnh:}
 \begin{itemize}
     \item Tính phân tán và không tập trung (distributed and decentralized): Khả năng phân chia dữ liệu thành nhiều phần, đặt trên nhiều node khác nhau trong khi người dùng vẫn nhận thấy dữ liệu này là một khối thống nhất.
     \item Tính mềm dẻo (elastic scalability): Hệ thống có thể dễ dàng mở rộng số node trong cluster để có thể phục vụ số lượng request lớn và rút bớt số node khi số lượng request giảm.
+    \item Tính sẵn sàng cao (high availability): Dữ liệu được sao lưu thành nhiều bản và được chia thành nhiều node. Điều này mang lại khả năng đáp ứng ngay lập tức cho Cassandra khi Client thực hiện tác vụ đọc hay ghi bằng cách thực hiện trên bản sao gần nhất hoặc trên tất cả các bản sao.
+    \item Tính nhất quán (consistance): trong Cassandra, dữ liệu sẽ nhất quán sau một khoảng thời gian nào đó chứ không phải được nhất quán ngay sau khi người dùng ghi dữ liệu
+    \item Tính chấp nhận lỗi (fault tolerance): Do dữ liệu được sao chép thành nhiều bản trên các node của cluster nên kể cả khi dữ liệu ở một node nào đó bị lỗi, ta vẫn có thể truy xuất dữ liệu của mình trên một node khác.
+    \item Tính hướng cột (column oriented key-value store): Các RDBMS hướng dòng (row-oriented) phải định nghĩa trước các cột (column) trong các bảng (table). Đối với Cassandra ta không phải làm điều đó, đơn giản là thêm vào bao nhiêu cột cũng được tùy theo nhu cầu của ta.
+    \item Hiêụ năng cao (high performance): Cassandra được thiết kế riêng biệt từ sơ khai cho đến khi đầy đủ lợi ích cho máy đa luồng/đa lõi và được chạy trên hàng chục những máy được đặt trong các trung tâm dữ liệu với quy mô nhất quán và liên tục với hàng trăm terabyte dữ liệu.
 \end{itemize}
+\subsubsubsection{Redis}
+\begin{center}
+  \captionsetup{type=figure}
+  \includegraphics[width=10cm]{img/redis.png}
+  \captionof{figure}{Redis}
+\end{center}
 \subsubsection{So sánh Relational Database và Non-Relational Database}
-\begin{table}[!h]
+\begin{table}[H]
 	    \centering
 	    \begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
 	        \hline

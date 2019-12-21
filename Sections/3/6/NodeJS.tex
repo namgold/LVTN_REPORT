@@ -54,7 +54,7 @@ Express.js được xây dựng bởi TJ Holowaychuk, một thành viên trong t
 
 ExpressJS được phát hành theo giấy phép mã nguồn mở, có cộng đồng hỗ trợ lớn, được phép sử dụng cho ứng dụng có mục đích thương mại.
 
-Cấu trúc thư mục dự án khi sử dụng ExpressJS được chia là 3 phần: routes, Views và Public. ExpressJS xây dựng ứng dụng web theo đúng mô hình MVC (Model – View – Controller).
+Cấu trúc thư mục dự án khi sử dụng ExpressJS được chia là 3 phần: routes, Views và Public. ExpressJS xây dựng ứng dụng web theo đúng mô hình MVC (Model - View - Controller).
 
 \textbf{Một số chức năng chính của ExpressJS:}
 \begin{itemize}
@@ -66,6 +66,7 @@ Cấu trúc thư mục dự án khi sử dụng ExpressJS được chia là 3 ph
 \subsubsubsection{Middleware trong ExpressJS:}
 
 Middleware trong ngành công nghệ phần mềm được định nghĩa là một phần mềm có nhiệm vụ làm cầu nối (bridge), cung cấp các dịch vụ từ phía hệ điều hành đến các ứng dụng, giúp các ứng dụng có thể tương tác với các thành phần được hệ điều hành cho phép. Middleware được coi là chất kết dính dữa các phần mềm với nhau.
+
 \textbf{Middleware trong Web:} 
 
 Với tư tưởng chung là cầu nối giữa tương tác của người dùng và phần nhân của hệ thống, trong lập trình Web, Middleware sẽ đóng vai trò trung gian giữa request/response (tương tác với người dùng) và các xử lý logic bên trong web server.Do đó, Middleware trong các Framework lập tình Web (Django, Rails, ExpressJS), sẽ là các hàm được dùng để tiền xử lý, lọc các request trước khi đưa vào xử lý logic hoặc điều chỉnh các response trước khi gửi về cho người dùng.
@@ -85,10 +86,10 @@ Hình trên mô tả 3 middleware có trong ExpressJS. Một request khi gửi �
   \item Xử lý công việc được yêu cầu bởi request (Main Task).
 \end{itemize}
 
-Bất kỳ bước nào trong các bước 2,3,4 nếu xảy ra lỗi sẽ trả về response thông báo cho người dùng, có thể là lỗi CORS, lỗi CSRF hay lỗi auth tùy thuộc vào request bị dừng ở bước nào.
+Bất kỳ bước nào trong các bước 2, 3, 4 nếu xảy ra lỗi sẽ trả về response thông báo cho người dùng, có thể là lỗi CORS, lỗi CSRF hay lỗi auth tùy thuộc vào request bị dừng ở bước nào.
 \textbf{Middleware trong ExpressJS:} 
 
-ExpressJS khi hoạt động, về cơ bản sẽ là một loạt các hàm Middleware được thực hiện liên tiếp nhau. Sau khi đã thiết lập, các request từ phía người dùng khi gửi lên ExpressJS sẽ thực hiện lần lượt qua các hàm Middleware cho đến khi trả về response cho người dùng. Các hàm này sẽ được quyền truy cập đến các đối tượng đại diện cho Request – req, Response – res, hàm Middleware tiếp theo – next, và đối tượng lỗi – err nếu cần thiết.
+ExpressJS khi hoạt động, về cơ bản sẽ là một loạt các hàm Middleware được thực hiện liên tiếp nhau. Sau khi đã thiết lập, các request từ phía người dùng khi gửi lên ExpressJS sẽ thực hiện lần lượt qua các hàm Middleware cho đến khi trả về response cho người dùng. Các hàm này sẽ được quyền truy cập đến các đối tượng đại diện cho Request - req, Response - res, hàm Middleware tiếp theo - next, và đối tượng lỗi - err nếu cần thiết.
 
 Một hàm Middleware sau khi hoạt động xong, nếu chưa phải là cuối cùng trong chuỗi các hàm cần thực hiện, sẽ cần gọi lệnh next() để chuyển sang hàm tiếp theo, bằng không xử lý sẽ bị treo tại hàm đó.
 
@@ -103,7 +104,7 @@ Các chức năng mà middleware có thể thực hiện trong ExpressJS sẽ ba
 Trong Express, có 5 kiểu middleware có thể sử dụng :
 \begin{itemize}
   \item Application-level middleware (middleware cấp ứng dụng).
-  \item Router-level middleware (middlware cấp điều hướng – router).
+  \item Router-level middleware (middlware cấp điều hướng - router).
   \item Error-handling middleware (middleware xử lý lỗi).
   \item Built-in middleware (middleware sẵn có).
   \item Third-party middleware (middleware của bên thứ ba).
