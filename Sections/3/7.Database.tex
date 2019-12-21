@@ -254,6 +254,17 @@ Cassandra ban đầu được tạo ra bởi Facebook. Sau đó nó đã đượ
   \includegraphics[width=10cm]{img/redis.png}
   \captionof{figure}{Redis}
 \end{center}
+
+Redis (REmote DIctionary Server) là một mã nguồn mở được dùng để lưu trữ dữ liệu có cấu trúc, có thể sử dụng như một cơ sở dữ liệu, bộ nhớ cache hay một message broker. Nó là hệ thống lưu trữ dữ liệu với dạng KEY-VALUE rất mạnh mẽ và phổ biến hiện nay.
+
+Bên cạnh lưu trữ key-value trên RAM giúp tối ưu hiệu năng, Redis còn có cơ chế sao lưu dữ liệu trên đĩa cứng cho phép phục hồi dữ liệu khi gặp sự cố.\\
+
+\textit{Đặc điểm:}
+\begin{itemize}
+    \item Đối tượng dữ liệu: Khác với RDMS như MySQL, hay PostgreSQL, Redis không có bảng. Redis lưu trữ data dưới dạng key-value.
+    \item Khả năng mở rộng
+    \item Lưu trữ trên bộ nhớ tạm: Không như các DBMS khác lưu trữ dữ liệu trên đĩa cứng, Redis lưu trữ dữ liệu trên RAM, và đương nhiên là thao tác đọc/ghi trên RAM.
+\end{itemize}
 \subsubsection{So sánh Relational Database và Non-Relational Database}
 \begin{table}[H]
 	    \centering
