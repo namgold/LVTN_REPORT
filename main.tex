@@ -1,0 +1,168 @@
+\documentclass[a4paper]{article}
+% \usepackage[vietnam]{babel}
+\usepackage[utf8]{vietnam}
+\usepackage{minted}
+\usepackage{csvsimple}
+\usepackage{cases}
+% \usepackage{vntex}
+%\usepackage[english,vietnam]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{svg}
+\usepackage{float}
+
+%\usepackage[utf8]{inputenc}
+%\usepackage[francais]{babel}
+\usepackage{a4wide,amssymb,epsfig,latexsym,multicol,array,hhline,fancyhdr}
+
+% \usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{lastpage}
+\usepackage[lined,boxed,commentsnumbered]{algorithm2e}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{graphicx}
+
+% Standard graphics package
+\usepackage{array}
+\usepackage{tabularx, caption}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{rotating}
+\usepackage{graphics}
+\usepackage[a4paper,left=2cm,right=2cm,top=1.8cm,bottom=2.8cm]{geometry}
+\usepackage{setspace}
+\usepackage{epsfig}
+\usepackage{tikz}
+\usepackage{indentfirst}
+\usetikzlibrary{arrows,snakes,backgrounds}
+\usepackage[unicode]{hyperref}
+%can file puenc.def trong thu muc goc de option [unicode] tao ra bookmark bang tieng Viet
+\hypersetup{urlcolor=blue,linkcolor=black,citecolor=black,colorlinks=true} 
+%\usepackage{pstcol} 								
+% PSTricks with the standard color package
+
+\newtheorem{theorem}{{\bf Theorem}}
+\newtheorem{property}{{\bf Property}}
+\newtheorem{proposition}{{\bf Proposition}}
+\newtheorem{corollary}[proposition]{{\bf Corollary}}
+\newtheorem{lemma}[proposition]{{\bf Lemma}}
+
+
+%\usepackage{fancyhdr}
+\setlength{\headheight}{40pt}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[L]{
+ \begin{tabular}{rl}
+    \begin{picture}(25,15)(0,0)
+    \put(0,-8){\includegraphics[width=8mm, height=8mm]{img/LogoBK.jpg}}
+    %\put(0,-8){\epsfig{width=10mm,figure=hcmut.eps}}
+   \end{picture}&
+	%\includegraphics[width=8mm, height=8mm]{hcmut.png} & %
+	\begin{tabular}{l}
+		\textbf{\bf \ttfamily Trường Đại học Bách Khoa - ĐHQG TP.HCM}\\
+		\textbf{\bf \ttfamily Khoa Khoa học \& Kỹ thuật Máy tính}
+	\end{tabular} 	
+ \end{tabular}
+}
+\fancyhead[R]{
+	\begin{tabular}{l}
+		\tiny \bf \\
+		\tiny \bf 
+	\end{tabular}  }
+\fancyfoot{} % clear all footer fields
+\fancyfoot[L]{\scriptsize \ttfamily Hệ thống phòng Tổ chức hành chính}
+\fancyfoot[R]{\scriptsize \ttfamily Page {\thepage}/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+
+%%%
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\makeatletter
+\newcounter {subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection .\@alph\c@subsubsubsection}
+\newcommand\subsubsubsection{\@startsection{subsubsubsection}{4}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\normalsize\bfseries}}
+\newcommand*\l@subsubsubsection{\@dottedtocline{3}{10.0em}{4.1em}}
+\newcommand*{\subsubsubsectionmark}[1]{}
+\makeatother
+
+\begin{document}
+\usetikzlibrary{calc}
+
+\begin{titlepage}
+\begin{tikzpicture}[remember picture, overlay]
+  \draw[line width = 2pt,color=blue] ($(current page.north west) + (2.15cm,-2.15cm)$) rectangle ($(current page.south east) + (-2.15cm,2.15cm)$);
+   \draw[line width = 1pt,color=black] ($(current page.north west) + (2.0cm,-2.0cm)$) rectangle ($(current page.south east) + (-2.0cm,2.0cm)$);
+\end{tikzpicture}
+\begin{center}
+TRƯỜNG ĐẠI HỌC BÁCH KHOA - ĐHQG TP.HCM\\
+\textbf{KHOA KHOA HỌC VÀ KỸ THUẬT MÁY TÍNH}\\
+- - - - - - - - - - - -
+\end{center}
+
+\vspace{0.5cm}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=3cm]{img/LogoBK.jpg}
+\end{center}
+\end{figure}
+\vspace{0.5cm}
+
+\begin{center}
+\begin{tabular}{c}
+\multicolumn{1}{c}{\textbf{{\huge ĐỀ CƯƠNG LUẬN VĂN TỐT NGHIỆP }}}\\
+~~\\
+\hline
+\multicolumn{1}{c}{\textbf{{\Large Xây dựng}}}\\\\
+\textbf{{\Large Hệ thống Tổ chức hành chính}}\\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{1cm}
+\begin{table}[H]
+\begin{tabular}{rlr}
+\hspace{5cm} GVHD: & Th.S Nguyễn Thanh Tùng&\\
+\\
+\hspace{5cm} SV thực hiện: & Nguyễn Quốc Cường & 1610372\\
+& Nguyễn Hoàng Nam & 1612115\\
+& Nguyễn Xuân Thi & 1613297\\
+
+\end{tabular}
+\end{table}
+\vspace{3cm}
+\begin{center}
+{\footnotesize Tp. Hồ Chí Minh, Tháng 12/2019}
+\end{center}
+\end{titlepage}
+
+
+% \selectlanguage{vietnamese}
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\includegraphics[width=150mm]{img/glo.png}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{Sections/1.Intro.tex}
+\input{Sections/2.Analyze.tex}
+\input{Sections/3.Technology.tex}
+\input{Sections/4.SystemDesign.tex}
+\input{cite.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{document}
