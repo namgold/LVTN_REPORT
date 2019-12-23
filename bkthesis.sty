@@ -1,0 +1,64 @@
+\ProvidesPackage{bkthesis}
+
+\RequirePackage{graphicx}
+\RequirePackage{vietnam}
+\RequirePackage{geometry}
+\RequirePackage{layout}
+\usepackage{xcolor}
+\usepackage{titlesec}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{indentfirst}
+
+% \usepackage{geometry}
+\def\thesislayout{	% A4: 210 × 297
+	\geometry{
+		a4paper,
+		total={160mm,247mm},  % fix over page
+		left=30mm,
+		top=20mm,
+	}
+}
+\def\makeprintversion{}
+
+%% Remember to load babel before loading this package or define the command \abstractname!
+\makeatletter
+\newenvironment{abstract}{
+  \titlepage \null
+  \@beginparpenalty\@lowpenalty
+  \begin{center}
+	\bfseries Tóm tắt nội dung
+	\@endparpenalty\@M~
+  \end{center}}
+ {\par\vfil\null\endtitlepage}
+\makeatother
+
+\makeatletter
+\newenvironment{acknowledgments}{
+	\titlepage \null
+	\small
+	\begin{center}
+	  {\bfseries Lời ngỏ\vspace{-.5em}\vspace{\z@}}~
+	\end{center}
+	\quotation
+  }{}
+\makeatother
+
+% Declaration
+\makeatletter
+\newenvironment{declaration}{
+	\titlepage \null
+	\small
+	\begin{center}
+	  {\bfseries \Large Lời cam đoan\vspace{\z@}}
+	\end{center}
+	\quotation
+  }{}
+\makeatother	  
+
+% \renewcommand\lstlistingname{Algorithm}
+% \renewcommand\lstlistlistingname{Algorithms}
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
