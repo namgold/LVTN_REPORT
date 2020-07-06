@@ -24,12 +24,10 @@
 
 %% Remember to load babel before loading this package or define the command \abstractname!
 \makeatletter
-\newenvironment{abstract}{
+\newenvironment{sumary}{
   \titlepage \null
-  \@beginparpenalty\@lowpenalty
   \begin{center}
-	\bfseries Tóm tắt nội dung
-	\@endparpenalty\@M~
+	{\bfseries \Large Tóm tắt nội dung\vspace{\z@}}
   \end{center}}
  {\par\vfil\null\endtitlepage}
 \makeatother
@@ -55,7 +53,18 @@
 	\end{center}
 	\quotation
   }{}
-\makeatother	  
+\makeatother
+
+\makeatletter
+\newenvironment{thankyou}{
+	\titlepage \null
+	\small
+	\begin{center}
+	  {\bfseries \Large Lời cảm ơn\vspace{\z@}}
+	\end{center}
+	\quotation
+  }{}
+\makeatother
 
 % \renewcommand\lstlistingname{Algorithm}
 % \renewcommand\lstlistlistingname{Algorithms}

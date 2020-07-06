@@ -1,4 +1,4 @@
-\documentclass[a4paper]{article}
+\documentclass[12pt, a4paper]{report}
 % \usepackage[vietnam]{babel}
 \usepackage[utf8]{vietnam}
 \usepackage{minted}
@@ -30,7 +30,7 @@
 \usepackage{multicol}
 \usepackage{rotating}
 \usepackage{graphics}
-\usepackage[a4paper,left=2cm,right=2cm,top=1.8cm,bottom=2.8cm]{geometry}
+\usepackage[a4paper,left=3cm,right=2cm,top=2cm,bottom=2.8cm]{geometry}
 \usepackage{setspace}
 \usepackage{epsfig}
 \usepackage{tikz}
@@ -54,32 +54,39 @@
 \setlength{\headheight}{40pt}
 \pagestyle{fancy}
 \fancyhead{} % clear all header fields
-\fancyhead[L]{
- \begin{tabular}{rl}
-    \begin{picture}(25,15)(0,0)
-    \put(0,-8){\includegraphics[width=8mm, height=8mm]{img/LogoBK.jpg}}
-    %\put(0,-8){\epsfig{width=10mm,figure=hcmut.eps}}
-   \end{picture}&
-	%\includegraphics[width=8mm, height=8mm]{hcmut.png} & %
-	\begin{tabular}{l}
-		\textbf{\bf \ttfamily Trường Đại học Bách Khoa - ĐHQG TP.HCM}\\
-		\textbf{\bf \ttfamily Khoa Khoa học \& Kỹ thuật Máy tính}
-	\end{tabular} 	
- \end{tabular}
+% \fancyhead[L]{
+%  \begin{tabular}{rl}
+%     \begin{picture}(25,15)(0,0)
+%     \put(0,-8){\includegraphics[width=8mm, height=8mm]{img/LogoBK.jpg}}
+%     %\put(0,-8){\epsfig{width=10mm,figure=hcmut.eps}}
+%   \end{picture}&
+% 	%\includegraphics[width=8mm, height=8mm]{hcmut.png} & %
+% 	\begin{tabular}{l}
+% 		\textbf{\bf \ttfamily Trường Đại học Bách Khoa - ĐHQG TP.HCM}\\
+% 		\textbf{\bf \ttfamily Khoa Khoa học \& Kỹ thuật Máy tính}
+% 	\end{tabular} 	
+%  \end{tabular}
+% }
+% \fancyhead[R]{
+% 	\begin{tabular}{l}
+% 		\tiny \bf \\
+% 		\tiny \bf 
+% 	\end{tabular}
+% }
+\fancyhead[LE, RO]{
+	Hệ thống phòng Tổ chức hành chính
 }
-\fancyhead[R]{
-	\begin{tabular}{l}
-		\tiny \bf \\
-		\tiny \bf 
-	\end{tabular}  }
 \fancyfoot{} % clear all footer fields
-\fancyfoot[L]{\scriptsize \ttfamily Hệ thống phòng Tổ chức hành chính}
-\fancyfoot[R]{\scriptsize \ttfamily Page {\thepage}/\pageref{LastPage}}
+% \fancyfoot[L]{\scriptsize \ttfamily Hệ thống phòng Tổ chức hành chính}
+% \fancyfoot[R]{\scriptsize \ttfamily Page {\thepage}/\pageref{LastPage}}
+\fancyfoot[C]{
+	Trang {\thepage}
+	}
 \renewcommand{\headrulewidth}{0.3pt}
 \renewcommand{\footrulewidth}{0.3pt}
 
 
-%%%
+%%%%%%%% create subsubsubsection %%%%%%%%%%%%%%%%%%%%%%
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
 \makeatletter
@@ -92,6 +99,7 @@
 \newcommand*\l@subsubsubsection{\@dottedtocline{3}{10.0em}{4.1em}}
 \newcommand*{\subsubsubsectionmark}[1]{}
 \makeatother
+%%%%%%%% end create subsubsubsection %%%%%%%%%%%%%%%%%%
 
 \begin{document}
 \usetikzlibrary{calc}
@@ -117,7 +125,7 @@ TRƯỜNG ĐẠI HỌC BÁCH KHOA - ĐHQG TP.HCM\\
 
 \begin{center}
 \begin{tabular}{c}
-\multicolumn{1}{c}{\textbf{{\huge ĐỀ CƯƠNG LUẬN VĂN TỐT NGHIỆP }}}\\
+\multicolumn{1}{c}{\textbf{{\Large ĐỀ CƯƠNG LUẬN VĂN TỐT NGHIỆP }}}\\
 ~~\\
 \hline
 \multicolumn{1}{c}{\textbf{{\Large Xây dựng}}}\\\\
@@ -129,7 +137,9 @@ TRƯỜNG ĐẠI HỌC BÁCH KHOA - ĐHQG TP.HCM\\
 \vspace{1cm}
 \begin{table}[H]
 \begin{tabular}{rlr}
+\hspace{5cm} Hội đồng: & Hệ thống thông tin&\\
 \hspace{5cm} GVHD: & Th.S Nguyễn Thanh Tùng&\\
+\hspace{5cm} GVPB: & Th.S Trần Thị Quế Nguyệt&\\
 \\
 \hspace{5cm} SV thực hiện: & Nguyễn Quốc Cường & 1610372\\
 & Nguyễn Hoàng Nam & 1612115\\
@@ -139,18 +149,44 @@ TRƯỜNG ĐẠI HỌC BÁCH KHOA - ĐHQG TP.HCM\\
 \end{table}
 \vspace{3cm}
 \begin{center}
-{\footnotesize Tp. Hồ Chí Minh, Tháng 12/2019}
+{\footnotesize Tp. Hồ Chí Minh, Tháng 07/2020}
 \end{center}
 \end{titlepage}
-
-
 % \selectlanguage{vietnamese}
-\newpage
 \begin{declaration}
-Chúng tôi xin cam đoan rằng đề tài luận văn tốt nghiệp: "Xây dựng hệ thống tổ chức hành chính" là do chúng tôi thực hiện dưới sự hướng dẫn của Th.S Nguyễn Thanh Tùng. Tất cả các tham khảo từ
+Chúng tôi xin cam đoan rằng đề tài luận văn tốt nghiệp: "Xây dựng Hệ thống Tổ chức Hành chính" là do chúng tôi thực hiện dưới sự hướng dẫn của Th.S Nguyễn Thanh Tùng. Tất cả các tham khảo từ
 các công trình khác đều được ghi rõ trong mục "Tài liệu tham khảo". Nội dung của luận văn này chưa từng được công bố trước đây dưới bất kì hình thức nào. Nếu có bất kì sai phạm nào, chúng tôi xin chịu hoàn toàn trách nhiệm trước Ban Chủ nhiệm Khoa và Ban Giám hiệu Nhà trường.
+\newline
+\rightline{Nhóm sinh viên thực hiện}
 \end{declaration}
 \newpage
+\begin{thankyou}
+Trước hết, chúng tôi xin trân trọng gửi lời cảm ơn đến Th.S Nguyễn Thanh Tùng - giảng viên khoa Khoa học và Kỹ thuật Máy tính (trường Đại học Bách Khoa - ĐHQG TP.HCM). Trong thời gian vừa qua, thầy đã tận tình chỉ dạy, hướng dẫn cho chúng tôi những kiến thức quý báu. Bên cạnh đó thầy cũng tạo mọi điều kiện thuận lợi để chúng tôi hoàn thành luận văn trong thời gian sớm nhất.\\
+\indent Bên cạnh đó, chúng tôi xin gửi lời cảm ơn đến Trường Đại học Bách Khoa - ĐHQG TPHCM, nơi đã tạo cho nhóm chung tôi môi trường học tập tốt. Quý thầy cô khoa Khoa học và Kỹ thuật Máy tính, những người đã truyền tri thức cùng tâm huyết của mình cho nhóm chúng tôi vốn kiến thức trong suốt thời gian qua.\\
+\indent Lời cuối cùng, chúng tôi xin gửi lời cám ơn sâu sắc đến gia đình, bạn bè - những ngườiđã sát cánh bên chúng tôi, là động lực to lớn để chúng tôi hoàn thành luận văn một cách trọn vẹn nhất
+\newline
+\rightline{Nhóm sinh viên thực hiện}
+\end{thankyou}
+\begin{sumary}
+    Đề tài luận văn mà nhóm chúng tôi thực hiện là "Xây dựng hệ thống thông tin phòng Tổ chức hành chính". Trong quá trình thực hiện đề tài này, nhóm chúng tôi đã thực hiện qua ba giai đoạn, cụ thể như sau:
+
+\textbf{Giai đoạn 1: } Tiến hành khảo sát, quy trình nghiệp vụ của phòng Tổ chức hành chính (Đại học Bách Khoa - ĐHQG-HCM) , và vai trò của phòng này trong quản lý nhân sự tại Trường Đại học Bách Khoa - ĐHQG-HCM nói chung. Từ đó, phân tích nghiệp vụ, tạo thành một quy trình cụ thể với đầu ra và đầu vào được xác định.
+
+\textbf{Giai đoạn 2: } Đưa ra các phân tích và thiết kế hệ thống, tìm hiểu các kỹ thuật nền tảng triển khai. Tiến hành lựa chọn công nghệ phù hợp, xây dựng hệ cơ sở dữ liệu, sau đó xây dựng hệ thống trên nền tảng website. Mục tiêu là xây dựng hệ thống có khả năng đáp ứng với mọi đặc thù, nhu cầu nghiệp vụ của một đơn vị quản lý nhân sự.
+
+\textbf{Giai đoạn 3: } Triển khai thực tế cho phòng Tổ chức hành chính - trường Đại học Bách Khoa - ĐHQG-HCM, qua thời gian sử dụng để tiến hành sửa chữa những lỗi phát sinh, đáp ứng nhu cầu người dùng.
+
+    Báo cáo đề cương luận văn tốt nghiệp của nhóm sẽ trình bày thông qua các nội dung chính sau đây:
+    \begin{itemize}
+        \item \textbf{Chương 1:} Tổng quan giới thiệu đề tài
+        \item \textbf{Chương 2:} Công nghệ sử dụng
+        \item \textbf{Chương 3:} Phân tích yêu cầu đề tài
+        \item \textbf{Chương 4:} Thiết kế hệ thống
+        \item \textbf{Chương 5:} Hiện thực hệ thống
+        \item \textbf{Chương 6:} Kiểm thử hệ thống
+        \item \textbf{Chương 7:} Tổng kết và hướng phát triển
+    \end{itemize}
+\end{sumary}
 \tableofcontents
 \newpage
 \listoffigures
@@ -160,13 +196,31 @@ các công trình khác đều được ghi rõ trong mục "Tài liệu tham kh
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{\textbf{TỔNG QUAN GIỚI THIỆU }}
+\newpage
 \input{Sections/1.Intro.tex}
-\input{Sections/2.Analyze.tex}
-\input{Sections/3.Technology.tex}
-\input{Sections/4.SystemDesign.tex}
+\newpage
+\chapter{\textbf{CƠ SỞ LÝ THUYẾT}}
+\newpage
+\input{Sections/2.Technology.tex}
+\newpage
+\chapter{\textbf{PHÂN TÍCH YÊU CẦU ĐỀ TÀI}}
+\newpage
+\input{Sections/3.Analyze.tex}
+\newpage
+\chapter{\textbf{Thiết kế hệ thống}}
+\newpage
+\input{Sections/5.DesignSystem.tex}
+\newpage
+\chapter{\textbf{Kết luận và hướng phát triển}}
+\newpage
+\input{Sections/4.Conclusion.tex}
 \input{cite.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+TODO: responsive
+validate form
+test
+automation test
 
 \end{document}

@@ -1,0 +1,145 @@
+\section{Các công nghệ front-end style}
+\subsection{jQuery}
+\begin{center}
+  \captionsetup{type=figure}
+  \includegraphics[width=8cm]{img/jquery-logo.jpg}
+  \captionof{figure}{jQuery}
+\end{center}
+
+jQuery là một thư viện Javascript nhanh, nhỏ và giàu tính năng. Nó làm cho mọi thứ như chuyển đổi và thao tác đối với HTML, xử lý sự kiện, hiệu ứng và Ajax đơn giản hơn nhiều với API dễ sử dụng, hoạt động trên vô số trình duyệt. Với sự kết hợp giữa tính linh hoạt và khả năng mở rộng, jQuery đã thay đổi cách hàng triệu người viết Javascript.\\
+
+\textbf{Đặc điểm và thế mạnh:}
+\begin{itemize}
+    \item \textbf{Dễ sử dụng:} Đây là lợi thế chính khi sử dụng jquery, nó dễ dàng hơn so với nhiều thư viện Javascript chuẩn khác bởi cú pháp đơn giản và bạn chỉ phải viết ít dòng lệnh để tạo ra các chức năng tương tự. Chỉ với 10 dòng lệnh JQuery bạn có thể thay thế cả 20 chục dòng lệnh DOM JavaScript, tiết kiệm thời gian của người lập trình.
+    \item \textbf{Là một thư viện lớn của Javascript:} Thực thi được nhiều chức năng hơn so với các thư viện Javascript khác
+    \item \textbf{Cộng đồng mã nguồn mở mạnh mẽ:} JQuery đang còn tương đối mới, có một cộng đồng dành thời gian của họ để phát triển các plugin của JQuery. Như vậy có hàng trăm plugin được viết trước đó có sẵn để tải về ngay lập tức để đẩy nhanh quá trình viết code của bạn. Một lợi thế khác đằng sau này là hiệu quả và an toàn của các script.
+    \item \textbf{Có nhiều tài liệu và hướng dẫn chi tiết:} Các trang web JQuery có một toàn bộ tài liệu
+    \item \textbf{Hỗ trợ Ajax:} JQuery cho phép bạn phát triển các Ajax một cách dễ dàng. Ajax cho phép một giao diện kiểu dáng đẹp trên trang web, các chức năng có thể được thực hiện trên các trang mà không đòi hỏi toàn bộ trang được tải lại.
+\end{itemize}
+\subsection{Bootstrap}
+\begin{center}
+  \captionsetup{type=figure}
+  \includegraphics[width=5cm]{img/bootstrap-logo.png}
+  \captionof{figure}{Bootstrap}
+\end{center}
+
+Bootstrap là một nền tảng (framework) miễn phí, mã nguồn mở, dựa trên HTML, CSS \& Javascript, nó được tạo ra để xây dựng các giao diện website tương thích với tất cả các thiết bị có kích thước màn hình khác nhau.
+Hiện nay Bootstrap là một trong những framework được sử dụng nhiều nhất trên thế giới để tạo ra các Responsive Website. Bootstrap đã tạo ra một tiêu chuẩn riêng, và rất được các lập trình viên ưu chuộng.\\
+
+\textbf{Đặc điểm và thế mạnh:}
+\begin{itemize}
+    \item Dễ sử dụng
+    \item Tiết kiệm thời gian cho người dùng khi cần tạo ra các trang web tương thích với các thiết bị khác nhau
+    \item Tương thích với các trình duyệt
+\end{itemize}
+
+\subsection{LESS}
+\begin{center}
+  \captionsetup{type=figure}
+  \includesvg[width=6cm]{img/less-logo}
+  \captionof{figure}{LESS}
+\end{center}
+
+LESS giúp viết đoạn mã CSS đơn giản, ngắn gọn và hiệu quả hơn, đồng thời cũng dễ quản lý hơn bằng cách thêm vào CSS các thành phần động như biến, mixins, toán tử và hàm. LESS được phát triển bởi một lập trình viên người Đức là Alexis Sellier. Các thành phần cơ bản của LESS:
+\begin{itemize}
+    \item Biến: được khai báo và gán cho các giá trị của thuộc tính
+    \begin{verbatim}
+        @width: 10px;
+        @height: @width + 10px;
+
+        #header {
+          width: @width;
+          height: @height;
+        }
+    \end{verbatim}
+    \item Mixins cho phép gán toàn bộ thuộc tính của một class trong CSS và trong class khác bằng cách thêm tên class này như một thuộc tính của class kia. Nó gần giống với biến, nhưng thay giá trị bằng toàn bộ các thuộc tính của class. Mixins cũng có thể được dùng như hàm bằng cách truyền tham số.
+    \begin{verbatim}
+        .bordered {
+            border-top: dotted 1px black;
+            border-bottom: solid 2px black;
+        }
+        #menu a {
+            color: #111;
+            .bordered();
+        }
+        
+        .post a {
+            color: red;
+            .bordered();
+        }
+    \end{verbatim}
+\end{itemize}
+\subsection{SASS}
+\begin{center}
+  \captionsetup{type=figure}
+  \includegraphics[width=4cm]{img/sass-logo.png}
+  \captionof{figure}{SASS}
+\end{center}
+
+SASS (Syntactically Awesome StyleSheets) là một mở rộng của CSS, nó cho phép bạn sử dụng biến (variables), quy tắc xếp chồng (nested rules), mixins, ..., và tất cả chúng đều hoàn toàn tương thích với cú pháp của CSS.
+
+\textbf{Các đặc tính của SASS}
+\begin{itemize}
+    \item Hoàn toàn tương thích với CSS
+    \item Cung cấp các tiện ích vô cùng mạnh mẽ
+    \item Giúp tiết kiệm thời gian viết CSS
+    \item Tổ chức các files một cách rõ ràng, giúp cho việc dễ dàng phát triển và bảo trì
+\end{itemize}
+
+\textbf{Các quy tắc sử dụng SASS}
+\begin{description}
+    \item 1. Quy tắc xếp chồng\\
+    Trong Sass, chúng ta có thể xếp chồng các thuộc tính như margin, padding, border, text... để tránh những khai báo rườm rà, dài dòng:
+    \begin{verbatim}
+        div {
+          text: {
+              align: center;
+              decoration: none;
+              transform: uppercase;
+          }
+          margin: {
+            left: 10px;
+            right: 50px;
+          }
+        }
+    \end{verbatim}
+    \item 2. Cách sử dụng biến\\
+    Biến bắt đầu bằng ký hiệu \$ và được thiết lập như các thuộc tính CSS. Ví dụ:
+    \begin{verbatim}
+        $width: 10px;
+        $height: $width + 10px;
+
+        #header {
+          width: $width;
+          height: $height;
+        }
+    \end{verbatim}
+    \item 3. Sử dụng Mixins:\\
+    Giống như Mixins trong LESS, Mixins giúp tái tạo lại các thuộc tính
+    \begin{verbatim}
+        @mixin bordered {
+            border-top: dotted 1px black;
+            border-bottom: solid 2px black;
+        }
+        #menu a {
+            color: #111;
+            @include bordered;
+        }
+        
+        .post a {
+            color: red;
+            @include bordered;
+        }
+    \end{verbatim}
+    \item 4. Sử dụng kế thừa:\\
+    Tính năng kế thừa cho phép chúng ta chỉ định cho một thành phần nào đó thừa hưởng tất cả các thuộc tính của một vùng chọn nào đó bất kỳ mà bạn đã khai báo sẵn.
+    \begin{verbatim}
+        .danger {
+            color: red;
+        }
+        .danger-bold {
+            @extend .danger;
+            font-weight: bold;
+        }
+    \end{verbatim}
+\end{description}

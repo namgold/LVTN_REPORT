@@ -1,0 +1,467 @@
+\section{Cơ sở dữ liệu (Database)}
+\textbf{Khái niệm:}
+
+Cơ sở dữ liệu (Database) là một tập hợp các dữ liệu có tổ chức, thường được lưu trữ và truy cập điện tử từ hệ thống máy tính. Khi cơ sở dữ liệu phức tạp hơn, chúng thường được phát triển bằng cách sử dụng các kỹ thuật thiết kế và mô hình hóa chính thức.\\
+
+\textbf{Phân loại:}
+\begin{itemize}
+    \item Cơ sở dữ liệu quan hệ (SQL)
+    \item Cơ sở dữ liệu phi quan hệ (NoSQL)
+\end{itemize}
+
+\textbf{So sánh cơ sở dữ liệu quan hệ và phi quan hệ:}
+\begin{table}[H]
+	    \centering
+	    \begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
+	    \hline
+	    &Cơ sở dữ liệu quan hệ&Cơ sở dữ liệu phi quan hệ\\
+	    \hline
+	    Ngôn ngữ truy vấn&Ngữ truy vấn có cấu trúc&Sử dụng ngôn ngữ truy vấn không cấu trúc\\
+	    \hline
+	    Cấu trúc&Biểu thị dữ liệu dưới dạng bảng, hàng và cột&Biểu thị dữ liệu dưới dạng biểu đồ, các cặp khóa-giá trị và nhiều hơn thế.\\
+	    \hline
+	    Khả năng mở rộng&Mở rộng thêm chiều dọc&Mở rộng theo chiều ngang\\
+	    \hline
+	    Chi phí&Chi phí xây dựng và bảo trì cao&Khoảng 10\% so với cơ sở dữ liệu quan hệ\\
+	    \hline
+	    \end{tabular}
+	    \caption{So sánh cơ sở dữ liệu quan hệ và phi quan hệ}
+\end{table}
+\subsection{Ngôn ngữ truy vấn có cấu trúc (SQL)}
+\subsubsection{SQL là gì?}
+SQL là loại ngôn ngữ máy tính, giúp cho thao tác lưu trữ và truy xuất dữ liệu được lưu trữ trong một cơ sở dữ liệu quan hệ. SQL là viết tắt của Structured Query Language là ngôn ngữ truy vấn có cấu trúc.
+
+Tất cả RDBMS (hệ thống quản lý cơ sở dữ liệu quan hệ) như đều sử dụng SQL như là ngôn ngữ cơ sở dữ liệu chuẩn.
+
+SQL là một ngôn ngữ được tiêu chuẩn hóa bởi ANSI (American National Standards Institute) – Viện tiêu chuẩn quốc gia Hoa Kỳ. Đây cũng đồng thời là ngôn ngữ được sử dụng phổ biến trong các hệ thống quản lý cơ sở dữ liệu quan hệ và hỗ trợ sử dụng trong các công ty lớn về công nghệ.
+\subsubsection{Tại sao phải sử dụng SQL?}
+SQL thường được các RDBMS sử dụng để tương tác với cơ sở dữ liệu thông qua các thao tác sau:
+\begin{itemize}
+    \item Tạo cơ sở dữ liệu, bảng và view mới.
+    \item Để chèn các bản ghi vào trong một cơ sở dữ liệu.
+    \item Để xóa các bản ghi từ một cơ sở dữ liệu.
+    \item Để lấy dữ liệu từ một cơ sở dữ liệu.
+\end{itemize}
+\subsubsection{Chức năng}
+Một trong những lý do khiến cho SQL được sử dụng phổ biến, chính là nó đã cho phép người dùng thực hiện đa dạng các chức năng sau:
+\begin{itemize}
+    \item Cho phép người dùng truy cập dữ liệu trong các hệ thống quản lý cơ sở dữ liệu quan hệ.
+    \item Cho phép người dùng mô tả dữ liệu.
+    \item Cho phép người dùng xác định dữ liệu trong cơ sở dữ liệu và thao tác dữ liệu đó.
+    \item Cho phép nhúng trong các ngôn ngữ khác sử dụng mô-đun SQL, thư viện và trình biên dịch trước.
+    \item Cho phép người dùng tạo và thả các cơ sở dữ liệu và bảng.
+    \item Cho phép người dùng tạo chế độ view, thủ tục lưu trữ, chức năng trong cơ sở dữ liệu.
+    \item Cho phép người dùng thiết lập quyền trên các bảng, thủ tục và view.
+\end{itemize}
+\subsubsection{Ưu điểm}
+\begin{itemize}
+    \item Dữ liệu có ở mọi nơi: Dữ liệu xuất hiện ở mọi nơi trên màn hình từ laptop đến điện thoại của bạn. Việc học tập và tìm hiểu SQL sẽ giúp bạn biết được cách thức hoạt động của những dữ liệu này.
+    \item Thêm, sửa, đọc và xóa dữ liệu dễ dàng: với SQL, các thao tác xử lý dữ liệu trở nên dễ dàng hơn bao giờ hết. Bạn chỉ cần thực hiện một số thao tác với dữ liệu đơn giản trên SQL thay vì phải dùng nhiều câu lệnh phức tạp trên các loại ngôn ngữ khác.
+    \item SQL giúp công việc lập trình dễ dàng hơn: bạn có thể lưu nhiều dữ liệu cho nhiều ứng dụng khác nhau trên cũng một cơ sở dữ liệu và việc truy cập các cơ sở dữ liệu này trở lên đơn giản hơn nhờ một cách thức giống nhau.
+    \item Được sử dụng và hỗ trợ bởi nhiều công ty lớn: tất cả các công ty lớn về công nghệ trên thế giới hiện nay như Microsoft, IBM, Oracle… đều hỗ trợ việc phát triển ngôn ngữ SQL.
+    \item Lịch sử hơn 40 năm: với lịch sử phát triển hơn 40 năm từ 1970, SQL vẫn tồn tại và trụ vững đến ngày nay. Điều này cho thấy vị trí của SQL hiện tại rất khó bị thay thế bởi bất kỳ một ngôn ngữ máy tính nào khác.
+\end{itemize}
+\subsection{Hệ cơ sở dữ liệu quan hệ (RDBMS)}
+\textbf{Khái niệm:}
+
+RDBMS - Relational Database Management System - là hệ cơ sở dữ liệu quan hệ. Tất cả các hệ thống quản trị cơ sở dữ liệu hiện đại như SQL, MySQL, MS SQL Server, Oracle, ... đều dựa trên RDBMS.
+
+Hệ thống quản lý cơ sở dữ liệu quan hệ (RDBMS) là một hệ thống quản lý cơ sở dữ liệu (DBMS) dựa trên mô hình quan hệ được giới thiệu bởi EF Codd.\\
+
+\textbf{Bảng (Table):}
+
+RDBMS sử dụng các bảng để lưu trữ dữ liệu. Mỗi bảng là một tập hợp các dữ liệu có liên quan đến nhau và có nhiều hàng và cột để lưu dữ liệu. Bảng là hình thức lưu trữ phổ biến và đơn giản nhất trong môt cơ sở dữ liệu quan hệ. Ví dụ về bảng một nhóm môn học trong bảng MONHOC sau đây:\\
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+         \textbf{ID}&\textbf{TEN\_MON\_HOC}&\textbf{SO\_TIN\_CHI}\\
+         \hline
+         1&Giải tích 1&4\\
+		\hline
+		2&Vật lý&3\\
+		\hline			
+		3&Kỹ thuật lập trình&4\\
+		\hline
+    \end{tabular}
+    \caption{Ví dụ về bảng dữ liệu}
+\end{table}
+
+\textbf{Trường (Field):}
+	
+	Mỗi bảng được chia thành các thực thể nhỏ gọi là các trường, chứa các thông tin cụ thể về mỗi bản ghi trong bảng. Các trường trong bảng MONHOC bao gồm: ID, TEN\_MON\_HOC, SO\_TIN\_CHI.\\
+	\begin{table}[H]
+	    \centering
+	    \begin{tabular}{|l|}
+	        \hline
+	        \textbf{TEN\_MON\_HOC}\\
+	        \hline
+	        Giải tích 1\\
+	        \hline
+	        Vật lý\\
+	        \hline
+	        Kỹ thuật lập trình\\
+	        \hline
+	    \end{tabular}
+	    \caption{Ví dụ một trường trong bảng dữ liệu}
+	\end{table}
+	
+\textbf{Hàng hoặc bản ghi (Record):}
+	
+Một hàng của bảng được gọi là bản ghi , nó chứa thông tin của một đối tượng trong bảng. Ví dụ ở bảng MONHOC có 3 bản ghi. Sau đây là một bản ghi trong bảng:\\
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|r|r|r|}
+        \hline
+		1&Giải tích 1&4\\
+		\hline
+    \end{tabular}
+    \caption{Ví dụ về một bản ghi}
+\end{table}
+
+\textbf{Ràng buộc (Constraint):}
+
+Ràng buộc là các quy tắc cho các cột dữ liệu trong bảng. Chúng được sử dụng để giới hạn loại dữ liệu có thể insert vào một bảng. Điều này đảm bảo tính chính xác và độ tin cậy của dữ liệu trong cơ sở dữ liệu.\\
+Constraint có thể là cấp độ cột hoặc cấp độ bảng. Các ràng buộc cấp độ cột chỉ được áp dụng cho một
+cột trong khi các ràng buộc mức bảng được áp dụng cho toàn bộ bảng.\\
+Sau đây là một số ràng buộc phổ biến nhất được sử dụng trong SQL :\\
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+         NOT NULL&Đảm bảo rằng một field không có giá trị NULL  \\
+         \hline
+         DEFAULT&Cung cấp giá trị mặc định của một field khi không được xác định\\
+         \hline
+         UNIQUE&Đảm bảo giá trị trong một field là khác nhau\\
+         \hline
+         PRIMARY Key&Mỗi record là duy nhất trong một bảng cơ sở dữ liệu\\
+         \hline
+         FOREIGN Key&Mỗi record là duy nhất trong trong bất kỳ bảng cơ sở dữ liệu khác\\
+         \hline
+         CHECK&Đảm bảo rằng tất cả các giá trị trong một cột thỏa mãm một số điều kiện\\
+         \hline
+         INDEX&Dùng để tạo và lấy dữ liệu một cách nhanh chóng\\
+         \hline
+    \end{tabular}
+    \caption{Một số ràng buộc phổ biến trong SQL}
+\end{table}
+\subsection{Hệ quản trị cơ sở dữ liệu}
+
+Hệ quản trị cơ sở dữ liệu (Database Management System - DBMS) là hệ thống kiểm soát việc lưu trữ, tổ chức và truy xuất dữ liệu.
+
+Mỗi DBMS đều có thành phần gọi là Query Language (Ngôn ngữ truy vấn), các ứng dụng muốn truy cập dữ liệu đều phải nhờ vào thành phần này.
+
+Các hệ quản trị cơ sở dữ liệu quan hệ phổ biến nhất hiện nay:
+\subsubsection{Oracle Database}
+\begin{center}
+  \captionsetup{type=figure}
+  \includegraphics[scale=0.4]{img/oracle.jpg}
+  \captionof{figure}{Oracle Database}
+\end{center}
+
+
+\textbf{Oracle là gì?}
+
+
+Oracle Database hay còn gọi là Oracle RDBMS hoặc đơn giản là Oracle là 1 hệ quản trị cơ sở dữ liệu quan hệ, được phát triển và phân phối bởi tập đoàn Oracle
+
+Cơ sở dữ liệu Oracle là cơ sở dữ liệu đầu tiên được thiết kế cho điện toán lưới doanh nghiệp, cách linh hoạt và tiết kiệm chi phí nhất để quản lý thông tin và ứng dụng. Điện toán lưới doanh nghiệp tạo ra các nhóm lớn máy chủ và lưu trữ mô-đun theo tiêu chuẩn công nghiệp. Với kiến trúc này, mỗi hệ thống mới có thể được cung cấp nhanh chóng từ nhóm các thành phần. Không cần khối lượng công việc cao nhất, bởi vì công suất có thể dễ dàng được thêm hoặc phân bổ lại từ các nguồn tài nguyên khi cần thiết.\\
+
+\textbf{Đặc điểm của Oracle}
+\begin{itemize}
+    \item Quản lý được hệ thống dữ liệu lớn
+    \item Hỗ trợ nhiều công cụ để quản trị cũng như nhập, xuất dữ liệu dễ dàng
+    \item Có thể hoạt động trên nhiều hệ điều hành khác nhau như Windows, Linux, Mac OS, Unix,...
+    \item Truy cập đồng thời
+    \item Hỗ trợ cơ chế khóa
+    \item Thực thi song song
+    \item Tính khả chuyển
+\end{itemize}
+
+\textbf{Thế mạnh của Oracle:}
+\begin{itemize}
+    \item \textit{Hệ thống quản lý và kiểm soát tập trung:} Điều này cho phép dữ liệu được kiểm soát hoàn toàn từ một trao đổi dạng bảng vì nó chịu trách nhiệm gán, thêm, xóa các bản ghi và sửa đổi chúng.
+    \item \textit{Tiêu chuẩn hóa:} Cho phép tiêu chuẩn hóa giữa các triển khai SQL khác nhau.
+    \item \textit{Nhóm các giao dịch:} Nó cho phép nhóm một số giao dịch và chia từng hoạt động thành các phân khúc và do đó đạt được hiệu suất tốt hơn trong thời gian ngắn hơn có thể.
+    \item \textit{Phương thức hiệu suất:} Áp dụng các phương pháp để cải thiện cơ sở dữ liệu thông qua ứng dụng Cluster.
+\end{itemize}
+\subsubsection{MySQL}
+\begin{center}
+  \captionsetup{type=figure}
+    \includegraphics[scale=0.5]{img/mysql.jpg}
+  \captionof{figure}{MySQL}
+\end{center}
+
+MySQL là một hệ quản trị cơ sở dữ liệu quan hệ mã nguồn mở, được phát triển, phân phối và hỗ trợ bởi tập đoàn Oracle.\\
+
+\textbf{MySQL hoạt động như thế nào?}
+
+MySQL hoạt động dưới hình thức client-server:
+\begin{itemize}
+    \item MySQL tạo một cơ sở dữ liệu để lưu trữ và thao tác dữ liệu, xác định mối quan hệ của từng bảng.
+    \item Khách hàng có thể thực hiện các yêu cầu bằng cách nhập các câu lệnh SQL cụ thể trên MySQL.
+    \item Ứng dụng máy chủ sẽ phản hồi với thông tin được yêu cầu và nó sẽ xuất hiện ở phía máy khách.
+\end{itemize}
+
+
+\textbf{Đặc điểm và thế mạnh:}
+\begin{itemize}
+    \item \textit{Tính nội bộ và linh động:}
+    \begin{itemize}
+    \item Viết bằng C và C++
+    \item Đã thử nghiệm với một loạt các trình biên dịch khác nhau
+    \item Hoạt động trên nhiều nền tảng khác nhau
+    \item Sử dụng thiết kế máy chủ nhiều lớp với các mo-đun độc lập
+    \item Được thiết kế để đa luồng hoàn toàn bằng cách sử dụng các luồng nhân, để dễ dàng sử dụng nhiều CPU nếu chúng có sẵn
+    \item Triển khai các bảng băm trong bộ nhớ, được sử dụng làm bảng tạm thời.
+    \item Triển khai các hàm SQL bằng cách sử dụng thư viện lớp được tối ưu hóa cao nhất phải nhanh nhất có thể
+    \end{itemize}
+    \item \textit{Bảo mật}
+    \begin{itemize}
+        \item Một hệ thống đặc quyền và mật khẩu rất linh hoạt và an toàn, và cho phép xác minh dựa trên máy chủ
+        \item Bảo mật mật khẩu bằng cách mã hóa tất cả lưu lượng mật khẩu khi bạn kết nối với máy chủ.
+    \end{itemize}
+    \item \textit{Khả năng mở rộng và giới hạn:}
+    \begin{itemize}
+        \item Hỗ trợ cơ sở dữ liệu lớn
+        \item Hỗ trợ lên đến 64 chỉ mục cho mỗi bảng
+    \end{itemize}
+    \item \textit{Ổn định, có tốc độ cao và dễ sử dụng}
+    \item \textit{Đa tính năng:} Hỗ trợ rất nhiều chức năng SQL
+\end{itemize}
+\subsubsection{SQL Server}
+\begin{center}
+  \captionsetup{type=figure}
+    \includegraphics[scale=0.3]{img/sql-server.png}
+  \captionof{figure}{SQL Server}
+\end{center}
+\textbf{SQL Server là gì?}
+
+SQL Server là một RDBMS được phát triển bởi tập đoàn Microsoft. Tương tự như phần mềm RDBMS khác, SQL Server được xây dựng dựa trên SQL, một ngôn ngữ lập trình tiêu chuẩn để tương tác với các cơ sở dữ liệu quan hệ. Máy chủ SQL được liên kết với Transact-SQL hoặc T-SQL, triển khai SQL Microsoft Microsoft bổ sung một tập hợp các cấu trúc lập trình độc quyền. SQL Server hoạt động độc quyền trên môi trường Windows trong hơn 20 năm. Năm 2016, Microsoft đã cung cấp nó trên Linux. SQL Server 2017 thường có sẵn vào tháng 10 năm 2016 chạy trên cả Windows và Linux.\\
+\newline
+\textbf{SQL Server hoạt động như thế nào?}
+\begin{itemize}
+    \item Giống như các công nghệ RDBMS khác, SQL Server chủ yếu được xây dựng xung quanh cấu trúc bảng dựa trên hàng để kết nối các thành phần dữ liệu liên quan trong các bảng khác nhau với nhau, tránh việc lưu trữ dữ liệu ở nhiều nơi trong cơ sở dữ liệu. Mô hình quan hệ cũng cung cấp tính toàn vẹn tham chiếu và các ràng buộc toàn vẹn khác để duy trì độ chính xác của dữ liệu. Các kiểm tra này là một phần của việc tuân thủ rộng hơn các nguyên tắc về tính nguyên tử, tính nhất quán, độ cô lập và độ bền, được gọi chung là các thuộc tính ACID và được thiết kế để đảm bảo rằng các giao dịch cơ sở dữ liệu được xử lý một cách đáng tin cậy.
+    \item Thành phần cốt lõi của SQL Server là SQL Server Database Engine, điều khiển lưu trữ, xử lý và bảo mật dữ liệu. Nó bao gồm một công cụ quan hệ xử lý các lệnh và truy vấn và một công cụ lưu trữ quản lý các tệp cơ sở dữ liệu, bảng, trang, chỉ mục, bộ đệm dữ liệu và giao dịch. Các thủ tục lưu trữ, kích hoạt, khung nhìn và các đối tượng cơ sở dữ liệu khác cũng được tạo bởi Cơ sở dữ liệu.
+    \item Bên dưới cơ sở dữ liệu là Hệ điều hành Máy chủ SQL hoặc SQLOS. SQLOS xử lý các chức năng cấp thấp hơn, chẳng hạn như quản lý bộ nhớ và I/O, lập lịch công việc và khóa dữ liệu để tránh các cập nhật xung đột. Một lớp giao diện mạng nằm phía trên Cơ sở dữ liệu và sử dụng giao thức Luồng dữ liệu dạng bảng của Microsoft để tạo điều kiện cho các tương tác yêu cầu và phản hồi với các máy chủ cơ sở dữ liệu. Và ở cấp độ người dùng, các DBA và nhà phát triển SQL Server viết các câu lệnh T-SQL để xây dựng và sửa đổi cấu trúc cơ sở dữ liệu, thao tác dữ liệu, thực hiện bảo vệ an ninh và sao lưu cơ sở dữ liệu, trong số các tác vụ khác
+\end{itemize}
+\textbf{Thế mạnh:}
+\begin{itemize}
+    \item Cho phép nhiều người dùng chung một cơ sở dữ liệu
+    \item Duy trì lưu trữ bền vững
+    \item Khả năng mở rộng
+    \item Tính bảo mật cao
+    \item Độ tin cậy, bảo vệ dữ liệu
+    \item Hỗ trợ phân tích dữ liệu
+    \item Kết hợp tốt với các sản phẩm của Microsoft
+    \item Có thể sao lưu, khôi phục dữ liệu một cách dễ dàng
+\end{itemize}
+
+\subsubsection{PostgreSQL}
+\begin{center}
+  \captionsetup{type=figure}
+    \includegraphics[scale=0.5]{img/postgre-sql.jpg}
+  \captionof{figure}{PostgreSQL}
+\end{center}
+
+PostgreSQL là một RDBMS mở nguồn mở được xây dựng trên mã nguồn ban đầu của đại học Berkeley.
+
+\textit{Đặc điểm và thế mạnh:}
+\begin{itemize}
+    \item Truy xuất dữ liệu tốc độ nhanh
+    \item Sử dụng câu truy vấn phức tạp
+    \item Sử dụng khóa ngoại
+    \item Có thủ tục
+    \item Đảm bảo tính toàn vẹn của các giao tác
+\end{itemize}
+
+\subsection{Hệ cơ sở dữ liệu phi quan hệ (Non-RDBMS)}
+Hệ cơ sở dữ liệu phi quan hệ là cơ sở dữ liệu không sử dụng mô hình bảng gồm các cột và hàng như nhiều hệ cơ sở dữ liệu truyền thống. Thay vào đó, Non-RDBMS sử dụng mô hình lưu trữ được tối ưu hóa cho các yêu cầu cụ thể của loại dữ liệu được lưu trữ. Cơ sở dữ liệu phi quan hệ (Non-relational database) phổ biến nhất được gọi là NoSQL.\\
+Các Non-RDBMS phổ biến:
+\subsubsection{MongoDB}
+\begin{center}
+  \captionsetup{type=figure}
+    \includegraphics[width=10cm]{img/mongo.png}
+  \captionof{figure}{MongoDB}
+\end{center}
+
+MongoDB là một hệ quản trị cơ sở dữ liệu mã nguồn mở và là cơ sở dữ liệu NoSQL hàng đầu, được nhiều người sử dụng.
+
+Các thuật ngữ thường sử dụng trong MongoDB:
+\begin{itemize}
+    \item \textbf{\_id:} Là trường bắt buộc có trong mỗi document. Trường \_id đại diện cho một giá trị duy nhất trong document MongoDB. Trường \_id cũng có thể được hiểu là khóa chính trong document. Nếu bạn thêm mới một document thì MongoDB sẽ tự động sinh ra một \_id.
+    \item \textbf{Collection:} Là nhóm của nhiều document trong MongoDB, tương ứng với một bảng trong RDBMS
+    \item \textbf{Cursor:} Đây là một con trỏ đến tập kết quả của một truy vấn. Máy khách có thể lặp qua một con trỏ để lấy kết quả.
+    \item \textbf{Database:} Nơi chứa các Collection.
+    \item \textbf{Document:} Là một bản ghi thuộc một Collection.
+    \item \textbf{Field:} Là một cặp name-value trong một document.
+\end{itemize}
+
+\textit{Thế mạnh:}
+\begin{itemize}
+    \item Ít schema hơn
+    \item Cấu trúc của một đối tượng rõ ràng
+    \item Không có các phép join phức tạp
+    \item Khả năng mở rộng cực lớn: Việc mở rộng dữ liệu mà không cần phải quan tâm đến các vấn đề như khóa ngoại, khóa chính, kiểm tra ràng buộc,...
+    \item Sử dụng bộ nhớ trong để lưu giữ cửa sổ làm việc cho phép truy cập dữ liệu nhanh hơn. Việc cập nhật được thực hiện nhanh gọn nhờ update tại chỗ (in-place).
+    \item Hỗ trợ nhiều công cụ lưu trữ
+\end{itemize}
+
+\textit{Các thao tác cơ bản trong MongoDB}
+\begin{description}
+\item 1.Create:\\
+Tạo hoặc thêm một document mới vào collection, nếu collection đó chưa tồn tại thì sẽ tạo mới collection
+
+MongoDB cung cấp hai phương thức để chèn thêm một document:
+\begin{itemize}
+    \item db.collection.insertOne(): chèn một tài liệu mới vào một collection. Nếu document không có trường \_id , MongoDB sẽ tự động thêm trường \_id với value kiểu ObjectId.
+\begin{verbatim}
+db.inventory.insertOne(
+    { item: "canvas", qty: 100, tags: ["cotton"], size:{ h: 28, w: 35.5, uom: "cm"}}
+)
+\end{verbatim}
+    \item db.collection.insertMany(): chèn nhiều document vào một collection, truyền vào phương thức là mảng các document
+\begin{verbatim}
+db.inventory.insertMany([
+    {item: "journal", qty: 25, tags: ["blank", "red"], size:{h: 14, w: 21, uom: "cm" } },
+    {item: "mat", qty: 85, tags: ["gray"], size:{h: 27.9, w: 35.5, uom: "cm" } },
+    {item: "mousepad", qty: 25, tags: ["gel", "blue"], size:{ h: 19, w: 22.85, uom: "cm"} }
+])
+\end{verbatim}
+\end{itemize}
+\item 2.Read\\
+Truy xuất document từ một collection. Để lấy ra toàn bộ document của ta sử dụng phương thức find
+\begin{verbatim}
+        db.inventory.find()
+\end{verbatim}
+\item 3. Update\\
+Thao tác update cho phép chình sửa document trong collection
+\begin{itemize}
+    \item Cập nhật một document với db.collection.updateOne():
+    \begin{verbatim}
+        db.inventory.updateOne(
+           { item: "paper" },
+           {
+             $set: { "size.uom": "cm", status: "P" }
+           }
+        )
+    \end{verbatim}
+    \item Cập nhật nhiều Document với db.collection.updateMany():
+    \begin{verbatim}
+        db.inventory.updateMany(
+           { "qty": { $lt: 50 } },
+           {
+             $set: { "size.uom": "in", status: "P" },
+             $currentDate: { lastModified: true }
+           }
+        )
+    \end{verbatim}
+    \item Thay thế một document: Để thay thế toàn bộ nội dung của một document (ngoại trừ trường \_id), truyền vào toàn bộ document mới là một tham số thứ hai của hàm. Ví dụ dưới đây thay thế document đầu tiên từ collection inventory mà có item bằng "paper"
+\begin{verbatim}
+db.inventory.replaceOne(
+    { item: "paper" },
+    { item: "paper", instock: [{ warehouse: "A", qty: 60 }, { warehouse: "B", qty: 40 }]}
+)
+\end{verbatim}
+\end{itemize}
+\item 4. Delete\\
+\begin{itemize}
+    \item Xóa một document thỏa mãn điều kiện: Để xóa chỉ một document phù hợp với điều kiện (trường hợp có nhiều document thỏa mãn thì sẽ xóa document đầu tiên), sử dụng db.collection.deleteOne(filter)
+    \item Xóa tất cả document thỏa mãn điều kiện: sử dụng db.collection.deleteMany(filter)
+
+\end{itemize}
+\end{description}
+
+\subsubsection{Neo4j}
+\begin{center}
+  \captionsetup{type=figure}
+  \includegraphics[width=10cm]{img/neo4j.png}
+  \captionof{figure}{Neo4j}
+\end{center}
+
+Neo4j là hệ quản trị cơ sở dữ liệu đồ thị đầu tiên được giới thiệu vào năm 2007 và công bố phiên bản 1.0 vào năm 2010. Hiện nay Neo4j là một trong những hệ quản trị cơ sở dữ liệu đồ thị được sử dụng nhiều nhất.
+
+\textit{Đặc điểm:} Các đối tượng được miêu tả dưới dạng các đỉnh của đồ thị, các thuộc tính của đối tượng được miêu tả bằng liên kết có hướng đến một đối tượng khác.
+
+\textit{Thế mạnh:}
+\begin{itemize}
+    \item Khả năng mở rộng cao
+    \item Phân tích dữ liệu theo thời gian thực
+    \item Thời gian thực thi nhanh
+\end{itemize}
+\subsubsection{Cassandra}
+\begin{center}
+  \captionsetup{type=figure}
+  \includegraphics[width=10cm]{img/cassandra.png}
+  \captionof{figure}{Cassandra}
+\end{center}
+
+Cassandra ban đầu được tạo ra bởi Facebook. Sau đó nó đã được tặng cho Quỹ Apache và tháng 2 năm 2010 và được nâng cấp lên thành dự án hàng đầu của Apache. Cassandra là một cơ sở dữ liệu phân tán kết hợp mô hình dữ liệu của Google Bigtable với thiết kế hệ thống phân tán như bản sao của Amazon Dynamo.\\
+
+\textit{Đặc điểm và thế mạnh:}
+\begin{itemize}
+    \item Tính phân tán và không tập trung (distributed and decentralized): Khả năng phân chia dữ liệu thành nhiều phần, đặt trên nhiều node khác nhau trong khi người dùng vẫn nhận thấy dữ liệu này là một khối thống nhất.
+    \item Tính mềm dẻo (elastic scalability): Hệ thống có thể dễ dàng mở rộng số node trong cluster để có thể phục vụ số lượng request lớn và rút bớt số node khi số lượng request giảm.
+    \item Tính sẵn sàng cao (high availability): Dữ liệu được sao lưu thành nhiều bản và được chia thành nhiều node. Điều này mang lại khả năng đáp ứng ngay lập tức cho Cassandra khi Client thực hiện tác vụ đọc hay ghi bằng cách thực hiện trên bản sao gần nhất hoặc trên tất cả các bản sao.
+    \item Tính nhất quán (consistance): trong Cassandra, dữ liệu sẽ nhất quán sau một khoảng thời gian nào đó chứ không phải được nhất quán ngay sau khi người dùng ghi dữ liệu
+    \item Tính chấp nhận lỗi (fault tolerance): Do dữ liệu được sao chép thành nhiều bản trên các node của cluster nên kể cả khi dữ liệu ở một node nào đó bị lỗi, ta vẫn có thể truy xuất dữ liệu của mình trên một node khác.
+    \item Tính hướng cột (column oriented key-value store): Các RDBMS hướng dòng (row-oriented) phải định nghĩa trước các cột (column) trong các bảng (table). Đối với Cassandra ta không phải làm điều đó, đơn giản là thêm vào bao nhiêu cột cũng được tùy theo nhu cầu của ta.
+    \item Hiêụ năng cao (high performance): Cassandra được thiết kế riêng biệt từ sơ khai cho đến khi đầy đủ lợi ích cho máy đa luồng/đa lõi và được chạy trên hàng chục những máy được đặt trong các trung tâm dữ liệu với quy mô nhất quán và liên tục với hàng trăm terabyte dữ liệu.
+\end{itemize}
+\subsubsection{Redis}
+\begin{center}
+  \captionsetup{type=figure}
+  \includegraphics[width=10cm]{img/redis.png}
+  \captionof{figure}{Redis}
+\end{center}
+
+
+\textbf{Redis là gì?}\\
+
+Redis (REmote DIctionary Server) là một mã nguồn mở được dùng để lưu trữ dữ liệu có cấu trúc, có thể sử dụng như một cơ sở dữ liệu, bộ nhớ cache hay một message broker. Nó là hệ thống lưu trữ dữ liệu với dạng KEY-VALUE rất mạnh mẽ và phổ biến hiện nay.
+Bên cạnh lưu trữ key-value trên RAM giúp tối ưu hiệu năng, Redis còn có cơ chế sao lưu dữ liệu trên đĩa cứng cho phép phục hồi dữ liệu khi gặp sự cố.
+Redis cung cấp thời gian phản hồi ở tốc độ chưa đến một mili giây, giúp thực hiện hàng triệu yêu cầu mỗi giây cho các ứng dụng thời gian thực.
+Redis thường được chọn sử dụng cho hoạt động lưu trữ bộ nhớ đệm, quản lý phiên, trò chơi, bảng xếp hạng, phân tích theo thời gian thực.\\
+
+\textbf{Redis hoạt động như thế nào?}\\
+
+Toàn bộ dữ liệu Redis nằm trong bộ nhớ, trái với cơ sở dữ liệu thông thường lưu dữ liệu trên ổ đĩa. Bằng cách loại bỏ sự cần thiết phải truy cập ổ đĩa, kho dữ liệu bộ nhớ như Redis tránh được sự chậm trễ do thời gian tìm kiếm và có thể truy cập dữ liệu trong vài micro giây. Redis có cấu trúc dữ liệu linh hoạt, độ khả dụng cao, dữ liệu trên Ram, hộ trợ lưu trữ trên ổ đĩa, cluster giúp xây dựng các ứng dụng quy mô lớn theo thời gian thực.\\
+
+\textbf{Đặc điểm của Redis}\\
+\begin{itemize}
+    \item Kho dữ liệu trong bộ nhớ: Toàn bộ dữ liệu Redis nằm trong bộ nhớ chính của máy chủ, trái với cơ sở dữ liệu thông thường phần lớn các tác vụ đều yêu cầu truy cập qua lại tới ổ đĩa, kho dữ liệu trong bộ nhớ như Redis không phải mất thời gian cho truy cập ỗ đĩa, do đó kho dữ liệu này có thể hộ trợ thêm khá nhiều tác vụ và có thời gian phản hổi nhanh hơn. Kết quả là hiệu suất nhanh thấy rõ với các tác vụ đọc hoặc ghi thông thường, hộ trợ hàng triệu tác vụ mỗi giây.
+    \item Cấu trúc dữ liệu linh hoạt
+    \item Đơn giản và dễ sử dụng: Redis đơn giản hóa bằng cách cho phép bạn viết ít dòng lệnh hơn để lưu trữ, truy cập và sử dụng dữ liệu trên ứng dụng. Ví dụ nếu ứng dụng của bạn có dữ liệu được lưu trên một mảng băm và bạn muốn lưu dữ liệu đó trên kho dữ liệu, bạn chỉ cần sử dụng cấu trúc dữ liệu mã hash của Redis. Tác vụ tương tự trên kho dữ liệu không có cấu trúc dữ liệu hash sẽ cần nhiều dòng mã để chuyển đổi từ định dạng này sang định dạng khác. Redis được trang bị cấu trúc dữ liệu riêng và nhiều tùy chọn để điều khiển và tương tác với dữ liệu của bạn. Có nhiều ngôn ngữ hộ trỡ Redis như Java, Python, PHP, JavaScript, Nodejs...
+    \item Sao chép và độ bền: Redis sử dụng kiến trúc bản Master-Slave và hộ trỡ sao chép không đồng bộ trong đó có thể sao chép dữ liệu sang nhiều máy chủ bản sao. Việc này mang lại hiệu suất đọc cao hơn vì có thể chia tách các yêu cầu giữa các máy chủ và tốc độ khôi phục nhanh hơn khi máy chủ gặp sự cố. Về độ bền Redis hộ trợ sao lưu sang ổ đĩa tại một thời điểm nào đó.
+    \item Khả năng mở rộng: Redis là dự án mã nguồn mở được một cộng đồng đông đảo ủng hộ. Không có giới hạn về nhà cung cấp hoặc công nghệ vì Redis có tính tiêu chuẩn mở, hộ trợ định dạng dữ liệu mở và tập hợp các máy chủ.
+\end{itemize}
+
+\textbf{Redis được sử dụng ở đâu?}
+\begin{itemize}
+    \item Lưu trữ bộ nhớ đệm: Redis có thể phục vụ những mục dữ liệu thường xuyên được yêu cầu với thời gian phản hồi chưa đến một mili giây và cho phép bạn dễ dàng thay đổi quy mô nhằm đáp ứng mức tải cao hơn mà không cần gia tăng phần backend có chi phí tốn kém hơn. Một số ví dụ phổ biến về nhớ đệm khi sử dụng Redis bao gồm nhớ đệm kết quả truy vấn cơ sở dữ liệu, nhớ đệm phiên lâu bền, nhớ đệm trang web và nhớ đệm các đối tượng thường xuyên được sử dụng như ảnh, tập tin và siêu dữ liệu.
+    \item Trò chuyện, nhắn tin và danh sách xử lý tác vụ: Redis với cơ chế Pub/Sub là cấu trúc gửi nhận tin nhắn trong Redis cho phép Redis hộ trợ các room chat hiệu suất cao theo thời gian thực. Cấu trúc dữ liệu dạnh list giúp dễ dàng triển khai một danh sách các tác vụ cần xử lý có tải trọng nhẹ.
+    \item Lưu trữ session: Redis là kho dữ liệu trong bộ nhớ có độ khả dụng và độ bền cao, được dùng để lưu trữ và quản lý session cho các ứng dụng internet. Redis có độ trễ thấp, quy mô, độ đàn hồi cần thiết để quản lý dữ liệu session như thông tin đăng nhập, trạng thái session.
+\end{itemize}
+\subsection{So sánh Relational Database và Non-Relational Database}
+\begin{table}[H]
+	    \centering
+	    \begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
+	        \hline
+	        &\textbf{Relational}&\textbf{Non-Relational}\\
+	        \hline
+	        Ngôn ngữ truy vấn&Ngôn ngữ truy vấn có cấu trúc &Truy vấn đối tượng: trực quan, chuyển một tài liệu để giải thích những gì bạn đang truy vấn\\
+	        \hline
+	        Kiểu dữ liệu&Lưu các kiểu dữ liệu được quy định&Có thể lưu bất kỳ loại dữ liệu nào\\
+	        \hline
+	        Khả năng mở rộng&Mở rộng thêm chiều dọc&Mở rộng theo chiều ngang\\
+	        \hline
+	        Hiển thị dữ liệu&Dưới dạng bảng và hàng&Dưới dạng JSON\\
+	        \hline
+	        Chi phí&Chi phí xây dựng và bảo trì cao&Khoảng 10\% so với Relational\\
+	        \hline
+	    \end{tabular}
+	    \caption{So sánh cơ sở dữ liệu quan hệ và cơ sở dữ liệu phi quan hệ}
+	\end{table}
+\subsection{Kết luận và lựa chọn}
+Dựa vào các đối tượng mà hệ thống hướng tới, hệ thống cần lưu trữ lượng dữ liệu lớn, bao gồm các dữ liệu có thuộc tính cố định lẫn các tập dữ liệu có thuộc tính thay đổi theo thời gian. Vì vậy, sử dụng kết hợp giữa hệ cơ sở dữ liệu quan hệ và hệ cơ sở dữ liệu phi quan hệ là hợp lý. Với những phân tích đánh giá như trên, nhóm quyết định lựa chọn sửa dụng đồng thời \textbf{MongoDB} và \textbf{Oracle}. Bên cạnh đó, hệ thống cần một bộ lưu trữ cache với tốc độ  cao, vì thế nhóm lựa chọn \textbf{Redis} để thực hiện lưu trữ cache cho hệ thống
