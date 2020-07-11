@@ -79,9 +79,7 @@
 \fancyfoot{} % clear all footer fields
 % \fancyfoot[L]{\scriptsize \ttfamily Hệ thống phòng Tổ chức hành chính}
 % \fancyfoot[R]{\scriptsize \ttfamily Page {\thepage}/\pageref{LastPage}}
-\fancyfoot[C]{
-	Trang {\thepage}
-	}
+\fancyfoot[C]{{\thepage}}
 \renewcommand{\headrulewidth}{0.3pt}
 \renewcommand{\footrulewidth}{0.3pt}
 
@@ -137,11 +135,11 @@ TRƯỜNG ĐẠI HỌC BÁCH KHOA - ĐHQG TP.HCM\\
 \vspace{1cm}
 \begin{table}[H]
 \begin{tabular}{rlr}
-\hspace{5cm} Hội đồng: & Hệ thống thông tin&\\
-\hspace{5cm} GVHD: & Th.S Nguyễn Thanh Tùng&\\
-\hspace{5cm} GVPB: & Th.S Trần Thị Quế Nguyệt&\\
+\hspace{4cm} Hội đồng: & Khoa học Máy tính&\\
+\hspace{4cm} Giáo viên hướng dẫn: & Th.S Nguyễn Thanh Tùng&\\
+\hspace{4cm} Giáo viên phản biện: & PGS.TS Trần Minh Quang &\\
 \\
-\hspace{5cm} SV thực hiện: & Nguyễn Quốc Cường & 1610372\\
+\hspace{4cm} SV thực hiện: & Nguyễn Quốc Cường & 1610372\\
 & Nguyễn Hoàng Nam & 1612115\\
 & Nguyễn Xuân Thi & 1613297\\
 
@@ -168,9 +166,9 @@ Trước hết, chúng tôi xin trân trọng gửi lời cảm ơn đến Th.S 
 \rightline{Nhóm sinh viên thực hiện}
 \end{thankyou}
 \begin{sumary}
-    Đề tài luận văn mà nhóm chúng tôi thực hiện là "Xây dựng hệ thống thông tin phòng Tổ chức hành chính". Trong quá trình thực hiện đề tài này, nhóm chúng tôi đã thực hiện qua ba giai đoạn, cụ thể như sau:
+    Đề tài luận văn mà nhóm chúng tôi thực hiện là "Xây dựng hệ thống thông tin phòng Tổ chức-Hành chính". Trong quá trình thực hiện đề tài này, nhóm chúng tôi đã thực hiện qua ba giai đoạn, cụ thể như sau:
 
-\textbf{Giai đoạn 1: } Tiến hành khảo sát, quy trình nghiệp vụ của phòng Tổ chức hành chính (Đại học Bách Khoa - ĐHQG-HCM) , và vai trò của phòng này trong quản lý nhân sự tại Trường Đại học Bách Khoa - ĐHQG-HCM nói chung. Từ đó, phân tích nghiệp vụ, tạo thành một quy trình cụ thể với đầu ra và đầu vào được xác định.
+\textbf{Giai đoạn 1: } Tiến hành khảo sát quy trình nghiệp vụ của phòng Tổ chức hành chính (Đại học Bách Khoa - ĐHQG-HCM) , và vai trò của phòng này trong quản lý nhân sự tại Trường Đại học Bách Khoa - ĐHQG-HCM nói chung. Từ đó, phân tích nghiệp vụ, tạo thành một quy trình cụ thể với đầu ra và đầu vào được xác định.
 
 \textbf{Giai đoạn 2: } Đưa ra các phân tích và thiết kế hệ thống, tìm hiểu các kỹ thuật nền tảng triển khai. Tiến hành lựa chọn công nghệ phù hợp, xây dựng hệ cơ sở dữ liệu, sau đó xây dựng hệ thống trên nền tảng website. Mục tiêu là xây dựng hệ thống có khả năng đáp ứng với mọi đặc thù, nhu cầu nghiệp vụ của một đơn vị quản lý nhân sự.
 
@@ -208,11 +206,15 @@ Trước hết, chúng tôi xin trân trọng gửi lời cảm ơn đến Th.S 
 \newpage
 \input{Sections/3.Analyze.tex}
 \newpage
-\chapter{\textbf{Thiết kế hệ thống}}
+\chapter{\textbf{THIẾT KẾ HỆ THỐNG}}
 \newpage
 \input{Sections/5.DesignSystem.tex}
 \newpage
-\chapter{\textbf{Kết luận và hướng phát triển}}
+\chapter{\textbf{HIỆN THỰC HỆ THỐNG}}
+\newpage
+\input{Sections/6.Implement}
+\newpage
+\chapter{\textbf{KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}}
 \newpage
 \input{Sections/4.Conclusion.tex}
 \input{cite.tex}
