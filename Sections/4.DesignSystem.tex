@@ -29,22 +29,22 @@ Các API trong hệ thống Tổ chức-Hành chính được thiết kế theo 
 \begin{itemize}
     \item API được đặt tên theo quy định chung, phù hợp với công dụng, quyền của API, thống nhất giữa các module.
     \begin{itemize}
-        \item  \textit{``/api/tchc/qua-trinh/dao-tao/all''}, \textit{``/api/tchc/qua-trinh/khen-thuong/all''}: API lấy tất cả dữ liệu của một bảng quá trình (đào tạo, khen thưởng). Ta có thể thấy các API có cấu trúc thống nhất với nhau giữa các bảng khác.
-        \item  \textit{``/api/tchc/qua-trinh/dao-tao/item/:id''}, \textit{``/api/user/qua-trinh/dao-tao/item/:id''}: API lấy dữ liệu của bảng quá trình đào tạo theo ID. API thứ nhất dùng cho cán bộ phòng Tổ chức - Hành chính, API thứ hai dành cho người dùng của hệ thống.
+        \item \textit{``/api/tchc/qua-trinh/dao-tao/all''}, \textit{``/api/tchc/qua-trinh/khen-thuong/all''}: API lấy tất cả dữ liệu của một bảng quá trình (đào tạo, khen thưởng). Ta có thể thấy các API có cấu trúc thống nhất với nhau với các bảng khác.
+        \item \textit{``/api/tchc/qua-trinh/dao-tao/item/:id''}, \textit{``/api/user/qua-trinh/dao-tao/item/:id''}: API lấy dữ liệu của bảng quá trình đào tạo theo ID. API thứ nhất dùng cho cán bộ phòng Tổ chức - Hành chính, API thứ hai dành cho người dùng của hệ thống.
     \end{itemize}
     \item Sử dụng các phương thức HTTP (GET, POST, PUT, DELETE) để truy cập và xử lý dữ liệu.
     \begin{itemize}
-        \item  \textit{app.post(/api/tchc/qua-trinh/dao-tao/all)}: cách dùng API để lấy dữ liệu.
-        \item  \textit{app.post(/api/tchc/qua-trinh/dao-tao)}: cách dùng API để thêm dữ liệu.
-        \item  \textit{app.put(/api/tchc/qua-trinh/dao-tao)}: cách dùng API để sửa đổi dữ liệu.
-        \item  \textit{app.delete(/api/tchc/qua-trinh/dao-tao)}: cách dùng API để xoá dữ liệu.
+        \item  \textit{POST /api/tchc/qua-trinh/dao-tao/all}: cách dùng API để lấy dữ liệu.
+        \item  \textit{POST /api/tchc/qua-trinh/dao-tao}: cách dùng API để thêm dữ liệu.
+        \item  \textit{PUT /api/tchc/qua-trinh/dao-tao}: cách dùng API để sửa đổi dữ liệu.
+        \item  \textit{DELETE /api/tchc/qua-trinh/dao-tao}: cách dùng API để xoá dữ liệu.
     \end{itemize}
     \item Dữ liệu được server trả về theo định dạng JSON.
     \item Server trả về các HTTP code phù hợp.
     \begin{itemize}
-        \item  \textit{res.status(400).send('Invalid parameter')}: Trả về lỗi này khi client gửi yêu cầu sai cú pháp.
-        \item  \textit{res.status(403).send('can not access data')}: Trả về lỗi này khi client không có quyền truy cập dữ liệu.
-        \item  \textit{res.status(404).send('Not found')}: Trả về lỗi này khi server không tìm thấy dữ liệu client yêu cầu.
+        \item  400 Invalid parameter: Trả về lỗi này khi client gửi yêu cầu sai cú pháp.
+        \item  403 Can not access data: Trả về lỗi này khi client không có quyền truy cập dữ liệu.
+        \item  404 Not found: Trả về lỗi này khi server không tìm thấy dữ liệu client yêu cầu.
     \end{itemize}
 \end{itemize}
 \section{Mô hình Model-View-Controller:}
@@ -57,17 +57,37 @@ Vận dụng mô hình MVC trong hệ thống phòng Tổ chức - Hành chính:
   \captionof{figure}{Kiến trúc tổng thể của hệ thống}
 \end{center}
 
-\section{Nguyên tắc thiết kế hệ thống}
-\indent Với một hệ thống khá phức tạp như trên cần phải có những nguyên tắc thiết kế chung
-\subsection{Cấu trúc cây thư mục của mã nguồn}
+\section{Cấu trúc cây thư mục của mã nguồn}
 Việc cần làm đầu tiên và quan trọng nhất là tổ chức files và các thư mục. Với một thiết kế tốt thì khi làm việc chung giữa nhiều người sẽ ít bị đụng độ. Nhóm lựa chọn cách chia mỗi thành phần của trang ra từng module tách biệt với nhau, thuận lợi cho việc mở rộng và bảo trì, bảo dưỡng.\\
 
-Dựa vào kiến trúc hệ thống mà nhóm đã thiết kế ở trên, nhóm đã chọn cấu trúc mã nguồn như sau:
+Dựa vào kiến trúc hệ thống mà nhóm đã thiết kế ở trên, nhóm đã thiết kế cấu trúc mã nguồn như sau:
 \begin{center}
   \captionsetup{type=figure}
   \includegraphics[width=15cm]{img/tree.png}
   \captionof{figure}{Cây thư mục của hệ thống}
 \end{center}
+
+Nhóm chia các danh mục, quá trình, chức năng vào từng module riêng, các module được thiết kế thống nhất theo mô hình MVC kết hợp với Redux. 
+
+Cách chia module này thuận lợi cho phân chia công việc, tránh đụng độ trong phát triển hệ thống, dễ dàng thêm các module mới trong quá trình mở rộng, giúp cho việc tìm và sửa lỗi trong quá trình bảo trì trở nên đơn giản hơn.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.4\linewidth}
+        \includegraphics[width=\linewidth]{img/module.png}
+        \caption{Thư mục module}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\linewidth}
+        \includegraphics[width=\linewidth]{img/moduleDetail.png}
+        \caption{Chi tiết từng module}
+    \end{subfigure}
+    \caption{Thư mục module của hệ thống}
+\end{figure}
+
+
+
+
+
 \section{Thiết kế đối tượng người dùng}
 \subsection{Danh sách đối tượng người dùng}
 \begin{center}
@@ -85,7 +105,7 @@ Dựa vào kiến trúc hệ thống mà nhóm đã thiết kế ở trên, nhó
     
     Khách có chức năng xem thông tin, tin tức, sự kiện của nhà trường, gửi email liên hệ, và đăng nhập.\\
     \hline
-	2&Cán bộ, công nhân viên nhà trường&Người dùng với mục đích quản lý được thông tin, các quá trình nghiệp vụ của bản thân.\\
+	2&Cán bộ, công nhân viên nhà trường&Người dùng với mục đích quản lý được thông tin, hồ sơ, các quá trình nghiệp vụ của bản thân.\\
 	\hline
     3&Cán bộ phòng Tổ chức - Hành chính&Là những cán bộ thuộc phòng Tổ chức - Hành chính. Họ có chức năng quản lý thông tin của các cán bộ, quản lý thông tin các quá trình nghiệp vụ của nhà trường.\\
     \hline
@@ -101,7 +121,7 @@ Dựa vào kiến trúc hệ thống mà nhóm đã thiết kế ở trên, nhó
 \begin{center}
   \captionsetup{type=figure}
   \includegraphics[width=15cm]{img/usecase/guest.png}
-  \captionof{figure}{Lược đồ usecase của đối tượng khách}
+  \captionof{figure}{Lược đồ Usecase của đối tượng khách}
 \end{center}
 
 Khách là những người dùng chưa đăng nhập, bao gồm tất cả các đối tượng như cán bộ,  công nhân viên nhà trường, sinh viên, cựu sinh viên, phụ huynh, đơn vị, doanh nghiệp là đối tác của nhà trường,...
@@ -154,7 +174,7 @@ Quản lý phòng Tổ chức - Hành chính sau khi đăng nhập sẽ có tấ
 Bên cạnh đó, quản lý phòng còn có nhiệm vụ phân công công việc cho nhân viên như phân công nhập hồ sơ, phân công duyệt yêu cầu.
 
 \subsection{Đối tượng: Quản trị hệ thống}
-\textbf{Lược đồ Usecase đối tượngq quản trị hệ thống}
+\textbf{Lược đồ Usecase đối tượng quản trị hệ thống}
 \begin{center}
   \captionsetup{type=figure}
   \includegraphics[width=13cm]{img/usecase/admin.png}
@@ -181,7 +201,7 @@ Bên cạnh đó, quản lý phòng còn có nhiệm vụ phân công công vi�
         \subitem - Cấu hình thông tin trang web: Cấu hình các thông tin chung cho hệ thống, thông tin liên lạc của phòng Tổ chức - Hành chính.
         \subitem - Cấu hình email hệ thống: Tủy chỉnh các mẫu email tự động của hệ thống.
 \end{itemize}
-
+\newpage
 \section{Thiết kế cơ sở dữ liệu cho hệ thống}
 \begin{center}
   \captionsetup{type=figure}
@@ -189,3 +209,4 @@ Bên cạnh đó, quản lý phòng còn có nhiệm vụ phân công công vi�
   \captionof{figure}{Thiết kế cơ sở dữ liệu của hệ thống}
 \end{center}
 Chi tiết xem ở tài liệu đính kèm.
+% \newpage
