@@ -24,6 +24,7 @@
 \usepackage{graphicx}
 
 % Standard graphics package
+\usepackage{subcaption}
 \usepackage{array}
 \usepackage{tabularx, caption}
 \usepackage{multirow}
@@ -74,10 +75,10 @@
 % 	\end{tabular}
 % }
 \fancyhead[LE, RO]{
-	Hệ thống phòng Tổ chức hành chính
+	Hệ thống phòng Tổ chức - Hành chính
 }
 \fancyfoot{} % clear all footer fields
-% \fancyfoot[L]{\scriptsize \ttfamily Hệ thống phòng Tổ chức hành chính}
+% \fancyfoot[L]{\scriptsize \ttfamily Hệ thống phòng Tổ chức - Hành chính}
 % \fancyfoot[R]{\scriptsize \ttfamily Page {\thepage}/\pageref{LastPage}}
 \fancyfoot[C]{{\thepage}}
 \renewcommand{\headrulewidth}{0.3pt}
@@ -108,8 +109,9 @@
    \draw[line width = 1pt,color=black] ($(current page.north west) + (2.0cm,-2.0cm)$) rectangle ($(current page.south east) + (-2.0cm,2.0cm)$);
 \end{tikzpicture}
 \begin{center}
-TRƯỜNG ĐẠI HỌC BÁCH KHOA - ĐHQG TP.HCM\\
-\textbf{KHOA KHOA HỌC VÀ KỸ THUẬT MÁY TÍNH}\\
+\textbf{\large{ĐẠI HỌC QUỐC GIA TP.HCM}}\\
+\textbf{\large{TRƯỜNG ĐẠI HỌC BÁCH KHOA}}\\
+\textbf{\large{KHOA KHOA HỌC \& KỸ THUẬT MÁY TÍNH}}\\
 - - - - - - - - - - - -
 \end{center}
 
@@ -123,56 +125,59 @@ TRƯỜNG ĐẠI HỌC BÁCH KHOA - ĐHQG TP.HCM\\
 
 \begin{center}
 \begin{tabular}{c}
-\multicolumn{1}{c}{\textbf{{\Large ĐỀ CƯƠNG LUẬN VĂN TỐT NGHIỆP }}}\\
+\multicolumn{1}{c}{\textbf{{\Large LUẬN VĂN TỐT NGHIỆP ĐẠI HỌC}}}\\
 ~~\\
 \hline
-\multicolumn{1}{c}{\textbf{{\Large Xây dựng}}}\\\\
-\textbf{{\Large Hệ thống Tổ chức hành chính}}\\
+\\
+\multicolumn{1}{c}{\textbf{{\Large XÂY DỰNG HỆ THỐNG THÔNG TIN}}}\\
+\textbf{{\Large PHÒNG TỔ CHỨC - HÀNH CHÍNH}}\\\\
 \hline
+\\
+\large{Ngành: Khoa học Máy tính}
 \end{tabular}
 \end{center}
 
 \vspace{1cm}
-\begin{table}[H]
-\begin{tabular}{rlr}
-\hspace{4cm} Hội đồng: & Khoa học Máy tính&\\
-\hspace{4cm} Giáo viên hướng dẫn: & Th.S Nguyễn Thanh Tùng&\\
-\hspace{4cm} Giáo viên phản biện: & PGS.TS Trần Minh Quang &\\
+\begin{table}[h!]
+    \fontsize{15pt}{1}
+    \centering
+    \begin{tabular}{lll}
+        \textbf{Hội đồng:} & \textbf{Khoa học Máy tính}\\
+        \textbf{GVHD:} & \textbf{Th.S Nguyễn Thanh Tùng}\\
+        \textbf{GVPB:} & \textbf{PGS.TS Trần Minh Quang}\\
 \\
-\hspace{4cm} SV thực hiện: & Nguyễn Quốc Cường & 1610372\\
-& Nguyễn Hoàng Nam & 1612115\\
-& Nguyễn Xuân Thi & 1613297\\
-
-\end{tabular}
+        \textbf{Sinh viên thực hiện:} & \textbf{Nguyễn Quốc Cường (1610372)}\\
+        & \textbf{Nguyễn Hoàng Nam (1612115)}\\
+        & \textbf{Nguyễn Xuân Thi (1613297)}\\
+    \end{tabular}
 \end{table}
-\vspace{3cm}
+\vspace{1.5cm}
 \begin{center}
-{\footnotesize Tp. Hồ Chí Minh, Tháng 07/2020}
+{\footnotesize TP. HỒ CHÍ MINH, THÁNG 08/2020}
 \end{center}
 \end{titlepage}
 % \selectlanguage{vietnamese}
 \begin{declaration}
-Chúng tôi xin cam đoan rằng đề tài luận văn tốt nghiệp: "Xây dựng Hệ thống Tổ chức Hành chính" là do chúng tôi thực hiện dưới sự hướng dẫn của Th.S Nguyễn Thanh Tùng. Tất cả các tham khảo từ
-các công trình khác đều được ghi rõ trong mục "Tài liệu tham khảo". Nội dung của luận văn này chưa từng được công bố trước đây dưới bất kì hình thức nào. Nếu có bất kì sai phạm nào, chúng tôi xin chịu hoàn toàn trách nhiệm trước Ban Chủ nhiệm Khoa và Ban Giám hiệu Nhà trường.
+Chúng tôi xin cam đoan rằng đề tài luận văn tốt nghiệp: "Xây dựng Hệ thống Tổ chức - Hành chính" là do chúng tôi thực hiện dưới sự hướng dẫn của Th.S Nguyễn Thanh Tùng. Tất cả các tham khảo từ các công trình khác đều được ghi rõ trong mục "Tài liệu tham khảo". Nội dung của luận văn này chưa từng được công bố trước đây dưới bất kì hình thức nào. Nếu có bất kì sai phạm nào, chúng tôi xin chịu hoàn toàn trách nhiệm trước Ban Chủ nhiệm Khoa và Ban Giám hiệu Nhà trường.
 \newline
 \rightline{Nhóm sinh viên thực hiện}
 \end{declaration}
 \newpage
 \begin{thankyou}
-Trước hết, chúng tôi xin trân trọng gửi lời cảm ơn đến Th.S Nguyễn Thanh Tùng - giảng viên khoa Khoa học và Kỹ thuật Máy tính (trường Đại học Bách Khoa - ĐHQG TP.HCM). Trong thời gian vừa qua, thầy đã tận tình chỉ dạy, hướng dẫn cho chúng tôi những kiến thức quý báu. Bên cạnh đó thầy cũng tạo mọi điều kiện thuận lợi để chúng tôi hoàn thành luận văn trong thời gian sớm nhất.\\
-\indent Bên cạnh đó, chúng tôi xin gửi lời cảm ơn đến Trường Đại học Bách Khoa - ĐHQG TPHCM, nơi đã tạo cho nhóm chung tôi môi trường học tập tốt. Quý thầy cô khoa Khoa học và Kỹ thuật Máy tính, những người đã truyền tri thức cùng tâm huyết của mình cho nhóm chúng tôi vốn kiến thức trong suốt thời gian qua.\\
-\indent Lời cuối cùng, chúng tôi xin gửi lời cám ơn sâu sắc đến gia đình, bạn bè - những ngườiđã sát cánh bên chúng tôi, là động lực to lớn để chúng tôi hoàn thành luận văn một cách trọn vẹn nhất
+Trước hết, chúng tôi xin trân trọng gửi lời cảm ơn đến Th.S Nguyễn Thanh Tùng - giảng viên khoa Khoa học và Kỹ thuật Máy tính (trường Đại học Bách Khoa - ĐHQG-HCM). Trong thời gian vừa qua, thầy đã tận tình chỉ dạy, hướng dẫn cho chúng tôi những kiến thức quý báu. Bên cạnh đó thầy cũng tạo mọi điều kiện thuận lợi để chúng tôi hoàn thành luận văn trong thời gian sớm nhất.\\
+\indent Bên cạnh đó, chúng tôi xin gửi lời cảm ơn đến Trường Đại học Bách Khoa - ĐHQG-HCM, nơi đã tạo cho nhóm chung tôi môi trường học tập tốt. Quý thầy cô khoa Khoa học và Kỹ thuật Máy tính, những người đã truyền tri thức cùng tâm huyết của mình cho nhóm chúng tôi vốn kiến thức trong suốt thời gian qua.\\
+\indent Lời cuối cùng, chúng tôi xin gửi lời cám ơn sâu sắc đến gia đình, bạn bè - những người đã sát cánh bên chúng tôi, là động lực to lớn để chúng tôi hoàn thành luận văn một cách trọn vẹn nhất.
 \newline
 \rightline{Nhóm sinh viên thực hiện}
 \end{thankyou}
 \begin{sumary}
-    Đề tài luận văn mà nhóm chúng tôi thực hiện là "Xây dựng hệ thống thông tin phòng Tổ chức-Hành chính". Trong quá trình thực hiện đề tài này, nhóm chúng tôi đã thực hiện qua ba giai đoạn, cụ thể như sau:
+    Đề tài luận văn mà nhóm chúng tôi thực hiện là "Xây dựng hệ thống thông tin phòng Tổ chức - Hành chính". Trong quá trình thực hiện đề tài này, nhóm chúng tôi đã thực hiện qua ba giai đoạn, cụ thể như sau:
 
-\textbf{Giai đoạn 1: } Tiến hành khảo sát quy trình nghiệp vụ của phòng Tổ chức hành chính (Đại học Bách Khoa - ĐHQG-HCM) , và vai trò của phòng này trong quản lý nhân sự tại Trường Đại học Bách Khoa - ĐHQG-HCM nói chung. Từ đó, phân tích nghiệp vụ, tạo thành một quy trình cụ thể với đầu ra và đầu vào được xác định.
+\textbf{Giai đoạn 1: } Tiến hành khảo sát quy trình nghiệp vụ của phòng Tổ chức - Hành chính (Đại học Bách Khoa - ĐHQG-HCM), và vai trò của phòng này trong quản lý nhân sự tại Trường Đại học Bách Khoa - ĐHQG-HCM. Từ đó, phân tích nghiệp vụ, tạo thành một quy trình cụ thể với đầu ra và đầu vào được xác định.
 
 \textbf{Giai đoạn 2: } Đưa ra các phân tích và thiết kế hệ thống, tìm hiểu các kỹ thuật nền tảng triển khai. Tiến hành lựa chọn công nghệ phù hợp, xây dựng hệ cơ sở dữ liệu, sau đó xây dựng hệ thống trên nền tảng website. Mục tiêu là xây dựng hệ thống có khả năng đáp ứng với mọi đặc thù, nhu cầu nghiệp vụ của một đơn vị quản lý nhân sự.
 
-\textbf{Giai đoạn 3: } Triển khai thực tế cho phòng Tổ chức hành chính - trường Đại học Bách Khoa - ĐHQG-HCM, qua thời gian sử dụng để tiến hành sửa chữa những lỗi phát sinh, đáp ứng nhu cầu người dùng.
+\textbf{Giai đoạn 3: } Triển khai thực tế cho phòng Tổ chức - Hành chính - trường Đại học Bách Khoa - ĐHQG-HCM, qua thời gian sử dụng để tiến hành sửa chữa những lỗi phát sinh, đáp ứng nhu cầu người dùng.
 
     Báo cáo đề cương luận văn tốt nghiệp của nhóm sẽ trình bày thông qua các nội dung chính sau đây:
     \begin{itemize}
@@ -208,15 +213,22 @@ Trước hết, chúng tôi xin trân trọng gửi lời cảm ơn đến Th.S 
 \newpage
 \chapter{\textbf{THIẾT KẾ HỆ THỐNG}}
 \newpage
-\input{Sections/5.DesignSystem.tex}
+\input{Sections/4.DesignSystem.tex}
 \newpage
+
 \chapter{\textbf{HIỆN THỰC HỆ THỐNG}}
 \newpage
-\input{Sections/6.Implement}
+\input{Sections/5.Implement}
 \newpage
+
+\chapter{\textbf{KIỂM THỬ}}
+\newpage
+\input{Sections/6.Test}
+\newpage
+
 \chapter{\textbf{KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}}
 \newpage
-\input{Sections/4.Conclusion.tex}
+\input{Sections/7.Conclusion.tex}
 \input{cite.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

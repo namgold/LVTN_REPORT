@@ -318,15 +318,15 @@ MongoDB cung cấp hai phương thức để chèn thêm một document:
     \item db.collection.insertOne(): chèn một tài liệu mới vào một collection. Nếu document không có trường \_id , MongoDB sẽ tự động thêm trường \_id với value kiểu ObjectId.
 \begin{verbatim}
 db.inventory.insertOne(
-    { item: "canvas", qty: 100, tags: ["cotton"], size:{ h: 28, w: 35.5, uom: "cm"}}
+    { item: "canvas", qty: 100, tags: ["cotton"], size:{ h: 28, w: 35.5}}
 )
 \end{verbatim}
     \item db.collection.insertMany(): chèn nhiều document vào một collection, truyền vào phương thức là mảng các document
 \begin{verbatim}
 db.inventory.insertMany([
-    {item: "journal", qty: 25, tags: ["blank", "red"], size:{h: 14, w: 21, uom: "cm" } },
-    {item: "mat", qty: 85, tags: ["gray"], size:{h: 27.9, w: 35.5, uom: "cm" } },
-    {item: "mousepad", qty: 25, tags: ["gel", "blue"], size:{ h: 19, w: 22.85, uom: "cm"} }
+    {item: "journal", qty: 25, tags: ["blank", "red"], size:{h: 14, w: 21}},
+    {item: "mat", qty: 85, tags: ["gray"], size:{h: 27.9, w: 35.5}},
+    {item: "mouse", qty: 25, tags: ["gel", "blue"], size:{h: 19, w: 22.85}}
 ])
 \end{verbatim}
 \end{itemize}
@@ -360,8 +360,8 @@ Thao tác update cho phép chình sửa document trong collection
     \item Thay thế một document: Để thay thế toàn bộ nội dung của một document (ngoại trừ trường \_id), truyền vào toàn bộ document mới là một tham số thứ hai của hàm. Ví dụ dưới đây thay thế document đầu tiên từ collection inventory mà có item bằng "paper"
 \begin{verbatim}
 db.inventory.replaceOne(
-    { item: "paper" },
-    { item: "paper", instock: [{ warehouse: "A", qty: 60 }, { warehouse: "B", qty: 40 }]}
+    {item:"paper"},
+    {item: "paper",instock:[{warehouse:"A",qty:60},{warehouse:"B",qty:40}]}
 )
 \end{verbatim}
 \end{itemize}
