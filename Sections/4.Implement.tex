@@ -1,3 +1,29 @@
+\section{Cấu trúc cây thư mục của mã nguồn}
+Việc cần làm đầu tiên và quan trọng nhất là tổ chức files và các thư mục. Với một thiết kế tốt thì khi làm việc chung giữa nhiều người sẽ ít bị đụng độ. Nhóm lựa chọn cách chia mỗi thành phần của trang ra từng module tách biệt với nhau, thuận lợi cho việc mở rộng và bảo trì, bảo dưỡng.\\
+
+Dựa vào kiến trúc hệ thống mà nhóm đã thiết kế ở trên, nhóm đã thiết kế cấu trúc mã nguồn như sau:
+\begin{center}
+  \captionsetup{type=figure}
+  \includegraphics[width=15cm]{img/tree.png}
+  \captionof{figure}{Cây thư mục của hệ thống}
+\end{center}
+
+Nhóm chia các danh mục, quá trình, chức năng vào từng module riêng, các module được thiết kế thống nhất theo mô hình MVC kết hợp với Redux. 
+
+Cách chia module này thuận lợi cho phân chia công việc, tránh đụng độ trong phát triển hệ thống, dễ dàng thêm các module mới trong quá trình mở rộng, giúp cho việc tìm và sửa lỗi trong quá trình bảo trì trở nên đơn giản hơn.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.4\linewidth}
+        \includegraphics[width=\linewidth]{img/module.png}
+        \caption{Thư mục module}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\linewidth}
+        \includegraphics[width=\linewidth]{img/moduleDetail.png}
+        \caption{Chi tiết từng module}
+    \end{subfigure}
+    \caption{Thư mục module của hệ thống}
+\end{figure}
 \section{Xác thực đối tượng người dùng}
 Hệ thống xác thực đối tượng người dùng bằng hệ thống xác thực tập trung (SSO) của trường Đại học Bách Khoa - ĐHQG-HCM.
 \begin{center}
